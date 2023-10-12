@@ -8,3 +8,18 @@ repos:
       rev: v1.2.3
       hooks:
           - id: flake8
+    - repo: local
+      hooks:
+          - id: check-branch-name
+            name: Check Branch Name
+            entry: bash
+            language: script
+            files: ^\.git/COMMIT_EDITMSG$
+            args:
+                - -c
+                - |
+                    branch_name=$(git symbolic-ref --short HEAD)
+                    if [[ ! $branch_name =~ ^(feature|bugfix|hotfix)/[A-Z0-9-]+$ ]]; then
+                        echo "Invalid branch name. Branch names should start with 'feature/', 'bugfix/', or 'hotfix/' followed by uppercase letters, numbers, and hyphens."
+                        exit 1
+                    fi
