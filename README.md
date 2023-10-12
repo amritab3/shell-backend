@@ -8,13 +8,7 @@
         git clone git@github.com:amritab3/shell-backend.git
     ```
 
-- Install
-
-    ```sh
-    pyenv
-    ```
-
-    following the instructions from [here](https://github.com/pyenv/pyenv).
+- Install `pyenv` following the instructions from [here](https://github.com/pyenv/pyenv).
 - Run
 
     ```sh
