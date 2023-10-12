@@ -174,4 +174,7 @@ cython_debug/
 # vscode
 .vscode/
 
+# local files
+.postgres-data/
+
 # End of https://www.toptal.com/developers/gitignore/api/django
