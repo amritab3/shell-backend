@@ -6,38 +6,12 @@
 #
 asgiref==3.7.2
     # via django
-cfgv==3.4.0
-    # via
-    #   -r dev-requirements.txt
-    #   pre-commit
-distlib==0.3.7
-    # via
-    #   -r dev-requirements.txt
-    #   virtualenv
 django==4.2.6
     # via
     #   -r requirements.in
     #   djangorestframework
 djangorestframework==3.14.0
     # via -r requirements.in
-filelock==3.12.4
-    # via
-    #   -r dev-requirements.txt
-    #   virtualenv
-identify==2.5.30
-    # via
-    #   -r dev-requirements.txt
-    #   pre-commit
-nodeenv==1.8.0
-    # via
-    #   -r dev-requirements.txt
-    #   pre-commit
-platformdirs==3.11.0
-    # via
-    #   -r dev-requirements.txt
-    #   virtualenv
-pre-commit==3.4.0
-    # via -r dev-requirements.txt
 psycopg==3.1.12
     # via -r requirements.in
 psycopg-binary==3.1.12
@@ -48,10 +22,6 @@ python-dotenv==1.0.0
     # via -r requirements.in
 pytz==2023.3.post1
     # via djangorestframework
-pyyaml==6.0.1
-    # via
-    #   -r dev-requirements.txt
-    #   pre-commit
 sqlparse==0.4.4
     # via django
 typing-extensions==4.8.0
@@ -59,10 +29,3 @@ typing-extensions==4.8.0
     #   asgiref
     #   psycopg
     #   psycopg-pool
-virtualenv==20.24.5
-    # via
-    #   -r dev-requirements.txt
-    #   pre-commit
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
