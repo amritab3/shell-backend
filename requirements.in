@@ -4,3 +4,4 @@ python-dotenv
 psycopg
 psycopg-binary
 psycopg-pool
+djangorestframework_simplejwt
