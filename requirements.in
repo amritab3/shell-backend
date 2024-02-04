@@ -5,3 +5,4 @@ psycopg
 psycopg-binary
 psycopg-pool
 djangorestframework_simplejwt
+django-cors-headers
