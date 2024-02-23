@@ -46,6 +46,11 @@
     ```sh
         pip-sync dev-requirements.txt requirements.txt
     ```
+- Install precommit hook using
+
+    ```sh
+        pre-commit install
+    ``` 
 
 ## Installing a new dependency
 
