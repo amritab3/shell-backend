@@ -2,6 +2,10 @@ from rest_framework import generics, status
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 from rest_framework.exceptions import APIException
+from rest_framework_simplejwt.authentication import JWTAuthentication
+from rest_framework.permissions import IsAuthenticated
+from backend.permissions import HasAdminRole
+from .permissions import IsOwner
 
 
 from .serializers import UserSerializer
@@ -18,18 +22,40 @@ class CreateUserView(generics.CreateAPIView):
 class ListUserView(generics.ListAPIView):
     serializer_class = UserSerializer
     queryset = User.objects.all()
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated, HasAdminRole]
 
 
 class RetrieveUpdateDeleteUser(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = UserSerializer
 
+    # Permission classes for various methods
+    permission_classes_by_method = {
+        "get": [IsAuthenticated, IsOwner],  # Permission for retrieve (GET)
+        "put": [IsAuthenticated],  # Permission for update (PUT)
+        "patch": [IsAuthenticated],  # Permission for partial update (PATCH)
+        "delete": [IsAuthenticated, IsOwner],  # Permission for delete (DELETE)
+    }
+
+    def get_permissions(self):
+        # Return the appropriate permission_classes based on the request method
+        return [
+            permission()
+            for permission in self.permission_classes_by_method.get(
+                self.request.method.lower(), [IsAuthenticated]
+            )
+        ]
+
     def get(self, request, *args, **kwargs):
         user = get_object_or_404(User, pk=kwargs["pk"])
+        self.check_object_permissions(request, user)
         serializer = UserSerializer(user)
+
         return Response(serializer.data)
 
     def delete(self, request, *args, **kwargs):
         user = get_object_or_404(User, pk=kwargs["pk"])
+        self.check_object_permissions(request, user)
         user.delete()
         return Response("User deleted", status=status.HTTP_204_NO_CONTENT)
 
