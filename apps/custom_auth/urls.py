@@ -1,7 +1,11 @@
 from django.urls import path
 from rest_framework_simplejwt import views as jwt_views
 
-from .views import GenerateForgotPasswordOTPView, OTPVerifyView
+from .views import (
+    GenerateForgotPasswordOTPView,
+    OTPVerifyView,
+    UpdatePasswordView,
+)
 
 urlpatterns = [
     path(
@@ -23,5 +27,10 @@ urlpatterns = [
         "verify-otp/",
         OTPVerifyView.as_view(),
         name="verify_forgot_password_otp",
+    ),
+    path(
+        "update-password/",
+        UpdatePasswordView.as_view(),
+        name="update_password",
     ),
 ]

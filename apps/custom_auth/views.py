@@ -88,3 +88,31 @@ class OTPVerifyView(views.APIView):
             {"message": "OTP verified successfully."},
             status=status.HTTP_200_OK,
         )
+
+
+class UpdatePasswordView(views.APIView):
+    def post(self, request):
+        email = request.data.get("email")
+        password = request.data.get("new_password")
+        confirm_password = request.data.get("confirm_new_password")
+
+        # Check if password and confirm_password match
+        if password != confirm_password:
+            return Response(
+                {"message": "Passwords do not match."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        try:
+            user = User.objects.get(email=email)
+            user.set_password(password)
+            user.save()
+            return Response(
+                {"message": "Password updated successfully."},
+                status=status.HTTP_200_OK,
+            )
+        except User.DoesNotExist:
+            return Response(
+                {"message": "User does not exist."},
+                status=status.HTTP_404_NOT_FOUND,
+            )
