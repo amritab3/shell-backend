@@ -1,7 +1,7 @@
 from rest_framework import permissions
 
 
-class HasAdminRole(permissions.BasePermission):
+class IsAdminUser(permissions.BasePermission):
     """
     Custom permission to only allow users with admin role.
     """
