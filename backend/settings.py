@@ -156,3 +156,8 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]
+
+# SimpleJWT settings
+SIMPLE_JWT = {
+    "TOKEN_OBTAIN_SERIALIZER": "apps.custom_auth.serializers.MyTokenObtainPairSerializer",
+}
