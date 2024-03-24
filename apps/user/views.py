@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.exceptions import APIException
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.permissions import IsAuthenticated
-from backend.permissions import HasAdminRole
+from backend.permissions import IsAdminUser
 from .permissions import IsOwner
 
 
@@ -23,7 +23,7 @@ class ListUserView(generics.ListAPIView):
     serializer_class = UserSerializer
     queryset = User.objects.all()
     authentication_classes = [JWTAuthentication]
-    permission_classes = [IsAuthenticated, HasAdminRole]
+    permission_classes = [IsAuthenticated, IsAdminUser]
 
 
 class RetrieveUpdateDeleteUser(generics.RetrieveUpdateDestroyAPIView):
@@ -32,8 +32,11 @@ class RetrieveUpdateDeleteUser(generics.RetrieveUpdateDestroyAPIView):
     # Permission classes for various methods
     permission_classes_by_method = {
         "get": [IsAuthenticated, IsOwner],  # Permission for retrieve (GET)
-        "put": [IsAuthenticated],  # Permission for update (PUT)
-        "patch": [IsAuthenticated],  # Permission for partial update (PATCH)
+        "put": [IsAuthenticated, IsOwner],  # Permission for update (PUT)
+        "patch": [
+            IsAuthenticated,
+            IsOwner,
+        ],  # Permission for partial update (PATCH)
         "delete": [IsAuthenticated, IsOwner],  # Permission for delete (DELETE)
     }
 
@@ -71,4 +74,8 @@ class RetrieveUpdateDeleteUser(generics.RetrieveUpdateDestroyAPIView):
 
 def validate_request(request):
     if "password" in request.data:
-        raise APIException({"detail": "Password cannot be updated."})
+        raise APIException({"detail": "Password cannot be updated from here."})
+
+
+class ListRolesView(generics.ListAPIView):
+    permission_classes = [IsAuthenticated, IsAdminUser]
