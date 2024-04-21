@@ -177,4 +177,7 @@ cython_debug/
 # local files
 .postgres-data/
 
+# intellij
+.idea
+
 # End of https://www.toptal.com/developers/gitignore/api/django

@@ -22,6 +22,8 @@ djangorestframework==3.14.0
     #   djangorestframework-simplejwt
 djangorestframework-simplejwt==5.3.1
     # via -r requirements.in
+pillow==10.2.0
+    # via -r requirements.in
 psycopg==3.1.12
     # via -r requirements.in
 psycopg-binary==3.1.12
