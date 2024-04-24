@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     "apps.user",
     "apps.custom_auth",
+    "apps.product",
 ]
 
 MIDDLEWARE = [

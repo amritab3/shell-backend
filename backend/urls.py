@@ -18,7 +18,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, re_path, path
 from rest_framework import routers
-from rest_framework_simplejwt.views import TokenObtainPairView
 
 router = routers.DefaultRouter()
 
@@ -31,5 +30,6 @@ urlpatterns = [
     ),
     re_path("users/", include("apps.user.urls")),
     re_path("auth/", include("apps.custom_auth.urls")),
+    re_path("products/", include("apps.product.urls")),
 ]
 urlpatterns += router.urls

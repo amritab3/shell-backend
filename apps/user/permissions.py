@@ -3,7 +3,6 @@ from rest_framework import permissions
 
 class IsOwner(permissions.BasePermission):
     message = "You do not have permission to perform this action."
-    print("First Print")
 
     def has_object_permission(self, request, view, obj):
         print("Second Print")
