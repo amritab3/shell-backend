@@ -36,6 +36,18 @@ class Product(models.Model):
         return self.name
 
 
+class ProductImage(models.Model):
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="images"
+    )
+    image = models.ImageField(
+        upload_to="product_images", default="", null=True, blank=True
+    )
+
+    def __str__(self):
+        return self.product.name + " - " + str(self.id)
+
+
 class ProductSize(models.Model):
     size = models.CharField(
         blank=True, default="", verbose_name="product_size"
