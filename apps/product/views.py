@@ -18,3 +18,18 @@ class ProductsViewSet(viewsets.ModelViewSet):
         request.data["uploaded_sizes"] = uploaded_sizes
 
         return super(ProductsViewSet, self).create(request, *args, **kwargs)
+
+
+class MenProductsViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.filter(gender="Men")
+    serializer_class = ProductSerializer
+
+
+class WomenProductsViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.filter(gender="Women")
+    serializer_class = ProductSerializer
+
+
+class KidsProductsViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.filter(gender="Kids")
+    serializer_class = ProductSerializer
