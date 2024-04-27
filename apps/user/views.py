@@ -52,7 +52,7 @@ class RetrieveUpdateDeleteUser(generics.RetrieveUpdateDestroyAPIView):
     def get(self, request, *args, **kwargs):
         user = get_object_or_404(User, pk=kwargs["pk"])
         self.check_object_permissions(request, user)
-        serializer = UserSerializer(user)
+        serializer = UserSerializer(user, context={"request": request})
 
         return Response(serializer.data)
 
