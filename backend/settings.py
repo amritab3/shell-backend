@@ -14,6 +14,7 @@ import os
 import sys
 import dotenv
 from pathlib import Path
+from datetime import timedelta
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -166,4 +167,6 @@ CORS_ALLOWED_ORIGINS = [
 # SimpleJWT settings
 SIMPLE_JWT = {
     "TOKEN_OBTAIN_SERIALIZER": "apps.custom_auth.serializers.MyTokenObtainPairSerializer",
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 }
