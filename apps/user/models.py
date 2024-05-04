@@ -4,6 +4,11 @@ from django.contrib.auth.models import AbstractBaseUser
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import PermissionsMixin
 
+GENDER_CHOICES = (
+    ("male", "Male"),
+    ("female", "Female"),
+)
+
 
 class CustomUserManager(BaseUserManager):
     def create_user(self, email, password, **extra_fields):
@@ -47,6 +52,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_superuser = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     roles = models.ManyToManyField(Role)
+    gender = models.CharField(
+        max_length=30, choices=GENDER_CHOICES, default=""
+    )
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["first_name", "last_name"]

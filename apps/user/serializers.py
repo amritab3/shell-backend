@@ -24,6 +24,25 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
 
+class UserAdminSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = [
+            "first_name",
+            "last_name",
+            "email",
+            "mobile_no",
+            "gender",
+            "roles",
+        ]
+
+    def create(self, validated_data):
+        uploaded_roles = validated_data.pop("roles")
+        user = User.objects.create(**validated_data)
+        user.roles.set(uploaded_roles)
+        return user
+
+
 class RoleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Role
