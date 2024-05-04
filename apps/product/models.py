@@ -69,21 +69,34 @@ class ProductSize(models.Model):
         return self.size + " - " + self.product.name
 
 
-# class CartItem(models.Model):
-#     product = models.ForeignKey(
-#         Product, on_delete=models.CASCADE, related_name="product_cart"
-#     )
-#     user = models.ForeignKey(
-#         User, on_delete=models.CASCADE, related_name="user_cart"
-#     )
-#     size = models.CharField(
-#         blank=True, default="", verbose_name="cart_item_size"
-#     )
-#     quantity = models.IntegerField(default=1, null=True, blank=True)
-#     created_at = models.DateTimeField(
-#         auto_now_add=True, verbose_name="created_at"
-#     )
-#     updated_at = models.DateTimeField(auto_now=True, verbose_name="updated_at")
-#
-#     def __str__(self):
-#         return self.product.name + " - " + self.user.email
+class Cart(models.Model):
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="user_cart"
+    )
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name="created_at"
+    )
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="updated_at")
+
+    def __str__(self):
+        return self.user.email
+
+
+class CartItem(models.Model):
+    cart = models.ForeignKey(
+        Cart, on_delete=models.CASCADE, related_name="cart_items"
+    )
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="product_cart"
+    )
+    size = models.CharField(
+        blank=True, default="", verbose_name="cart_item_size"
+    )
+    quantity = models.IntegerField(default=1, null=True, blank=True)
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name="created_at"
+    )
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="updated_at")
+
+    def __str__(self):
+        return self.product.name + " - cart:  " + str(self.cart.id)

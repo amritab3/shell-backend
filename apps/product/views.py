@@ -1,10 +1,13 @@
-from django.shortcuts import render
 from rest_framework import viewsets
 import json
 
-from .models import Product
-from .serializers import ProductSerializer
+from rest_framework.permissions import IsAuthenticated
+
+from .models import Product, Cart
+from .serializers import ProductSerializer, CartSerializer
 from rest_framework.parsers import MultiPartParser, FormParser
+
+from backend.permissions import IsOwner
 
 
 # Create your views here.
@@ -33,3 +36,17 @@ class WomenProductsViewSet(viewsets.ModelViewSet):
 class KidsProductsViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.filter(gender="Kids")
     serializer_class = ProductSerializer
+
+
+class CartViewSet(viewsets.ModelViewSet):
+    queryset = Cart.objects.all()
+    serializer_class = CartSerializer
+    permission_classes = [IsAuthenticated]
+
+    def create(self, request, *args, **kwargs):
+        request.data["user"] = request.user.id
+        return super(CartViewSet, self).create(request, *args, **kwargs)
+
+    def get_queryset(self):
+        queryset = Cart.objects.filter(user=self.request.user)
+        return queryset
