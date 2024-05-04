@@ -7,8 +7,8 @@ from rest_framework.permissions import IsAuthenticated
 from backend.permissions import IsAdminUser
 from .permissions import IsOwner
 
-
-from .serializers import UserSerializer
+from .serializers import UserSerializer, UserAdminSerializer
+from rest_framework import viewsets
 
 # from .permissions import UserPermission
 from .models import User
@@ -79,3 +79,8 @@ def validate_request(request):
 
 class ListRolesView(generics.ListAPIView):
     permission_classes = [IsAuthenticated, IsAdminUser]
+
+
+class UserAdminViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserAdminSerializer
