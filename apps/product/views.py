@@ -74,12 +74,20 @@ class CartViewSet(viewsets.ModelViewSet):
         except Product.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
-        CartItem.objects.create(
-            cart=cart,
-            product=product,
-            quantity=data["quantity"],
-            size=data["size"],
-        )
+        if not created:
+            cart_item = CartItem.objects.get(
+                product=product, cart=cart, size=data["size"]
+            )
+            cart_item.quantity = data["quantity"]
+            cart_item.save()
+
+        else:
+            CartItem.objects.create(
+                cart=cart,
+                product=product,
+                quantity=data["quantity"],
+                size=data["size"],
+            )
 
         serializer = CartSerializer(cart)
 
