@@ -33,6 +33,7 @@ urlpatterns = [
     re_path("users/", include("apps.user.urls")),
     re_path("auth/", include("apps.custom_auth.urls")),
     re_path("products/", include("apps.product.urls")),
+    re_path("orders/", include("apps.order.urls")),
 ]
 urlpatterns += router.urls
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
