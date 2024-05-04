@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     "apps.user",
     "apps.custom_auth",
     "apps.product",
+    "apps.order",
 ]
 
 MIDDLEWARE = [
