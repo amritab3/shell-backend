@@ -1,3 +1,4 @@
+import uuid
 from django.db import models
 
 from apps.product.models import Product
@@ -18,6 +19,7 @@ ORDER_STATUS_CHOICES = (
 
 
 class Order(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     payment_method = models.CharField(
         max_length=20, default="esewa", choices=PAYMENT_METHOD_CHOICES

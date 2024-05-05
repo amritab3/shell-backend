@@ -26,7 +26,9 @@ class OrderViewSet(viewsets.ModelViewSet):
 
             if product_size.size_inventory < product["quantity"]:
                 return Response(
-                    {"message": "Quantity exceeded the inventory size"},
+                    {
+                        "message": f"Quantity exceeded the inventory size for {product['product']}"
+                    },
                     status=status.HTTP_400_BAD_REQUEST,
                 )
 
@@ -37,4 +39,24 @@ class OrderViewSet(viewsets.ModelViewSet):
             product_size.size_inventory = remaining_quantity
             product_size.save()
 
-        return super(OrderViewSet, self).create(request, *args, **kwargs)
+        order = super(OrderViewSet, self).create(request, *args, **kwargs)
+        delivery_charge = 100
+
+        payment_form_data = {
+            "amount": int(order.data["amount"]),
+            "product_service_charge": 0,
+            "product_delivery_charge": 100,
+            "tax_amount": 0,
+            "total_amount": int(order.data["amount"]) + delivery_charge,
+            "transaction_uuid": order.data["id"],
+            "product_code": "EPAYTEST",
+            "signed_field_names": "total_amount,transaction_uuid,product_code",
+            "success_url": "http://localhost:3000/users/esewa_payment_success",
+            "failure_url": "http://localhost:3000/users/esewa_payment_failed",
+        }
+
+        response_data = {
+            "order": order.data,
+            "paymentFormData": payment_form_data,
+        }
+        return Response(data=response_data, status=status.HTTP_201_CREATED)
