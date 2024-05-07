@@ -10,7 +10,7 @@ from backend.permissions import IsAdminUser
 from .permissions import IsOwner
 from .serializers import UserSerializer, UserAdminSerializer, CartSerializer
 from .models import User, CartItem, Cart
-from apps.product.models import Product
+from apps.product.models import Product, ProductSize
 
 
 class CreateUserView(generics.CreateAPIView):
@@ -126,8 +126,26 @@ class CartViewSet(viewsets.ModelViewSet):
             return Response(
                 status=status.HTTP_404_NOT_FOUND,
                 data={
-                    "message": "Product you are trying to add does "
-                    "not exist"
+                    "message": "Product you are trying to add does not exist"
+                },
+            )
+
+        try:
+            product_size = ProductSize.objects.get(
+                product=product, size=data["size"]
+            )
+            if product_size.size_inventory < data["quantity"]:
+                return Response(
+                    {
+                        "message": f"Quantity exceeded the inventory size for {product.name} size {data['size']}"
+                    },
+                    status=status.HTTP_400_BAD_REQUEST,
+                )
+        except ProductSize.DoesNotExist:
+            return Response(
+                status=status.HTTP_404_NOT_FOUND,
+                data={
+                    "message": "Product Size you are trying to add does not exist"
                 },
             )
 
