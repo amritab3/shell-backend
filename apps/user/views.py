@@ -8,7 +8,12 @@ from rest_framework.decorators import action
 
 from backend.permissions import IsAdminUser
 from .permissions import IsOwner
-from .serializers import UserSerializer, UserAdminSerializer, CartSerializer
+from .serializers import (
+    UserSerializer,
+    UserAdminSerializer,
+    CartSerializer,
+    CartItemSerializer,
+)
 from .models import User, CartItem, Cart
 from apps.product.models import Product, ProductSize
 
@@ -95,7 +100,17 @@ class CartViewSet(viewsets.ModelViewSet):
         return super(CartViewSet, self).create(request, *args, **kwargs)
 
     def get_queryset(self):
-        queryset = Cart.objects.filter(user=self.request.user)
+        user_id = self.kwargs["userId"]
+
+        try:
+            user = User.objects.get(id=user_id)
+        except User.DoesNotExist:
+            return Response(
+                status=status.HTTP_404_NOT_FOUND,
+                data={"message": "User does not exist"},
+            )
+
+        queryset = Cart.objects.filter(user=user)
         return queryset
 
     def get_object(self):
@@ -152,23 +167,52 @@ class CartViewSet(viewsets.ModelViewSet):
         cart, created = Cart.objects.get_or_create(user=user)
 
         if not created:
-            cart_item = CartItem.objects.get(
-                product=product, cart=cart, size=data["size"]
-            )
-            cart_item.quantity = data["quantity"]
+            try:
+                cart_item = CartItem.objects.get(
+                    product=product, cart=cart, size=data["size"]
+                )
+                cart_item.quantity = data["quantity"]
+            except CartItem.DoesNotExist:
+                cart_item = CartItem.objects.create(
+                    cart=cart,
+                    product=product,
+                    quantity=data["quantity"],
+                    size=data["size"],
+                )
             cart_item.save()
-
         else:
-            CartItem.objects.create(
+            cart_item = CartItem.objects.create(
                 cart=cart,
                 product=product,
                 quantity=data["quantity"],
                 size=data["size"],
             )
 
-        serializer = CartSerializer(cart)
+        serializer = CartItemSerializer(
+            cart_item, context={"request": request}
+        )
 
-        return Response(status=status.HTTP_200_OK, data=serializer.data)
+        return Response(status=status.HTTP_201_CREATED, data=serializer.data)
+
+    @action(
+        methods=["delete"],
+        detail=False,
+        url_path=r"delete-cart-item",
+        url_name="cart-item",
+    )
+    def delete_cart_item(self, request, *args, **kwargs):
+        cart_item_id = request.query_params.get("id")
+        try:
+            cart_item = CartItem.objects.get(id=cart_item_id)
+            serializer = CartItemSerializer(cart_item)
+
+            cart_item.delete()
+            return Response(status=status.HTTP_200_OK, data=serializer.data)
+        except CartItem.DoesNotExist:
+            return Response(
+                status=status.HTTP_404_NOT_FOUND,
+                data={"message": "Cart Item Does Not Exist"},
+            )
 
     @action(
         methods=["get"],
@@ -195,7 +239,7 @@ class CartViewSet(viewsets.ModelViewSet):
                 data={"message": "Cart not found for user"},
             )
 
-        serializer = CartSerializer(cart)
+        serializer = CartSerializer(cart, context={"request": request})
 
         return Response(
             status=status.HTTP_200_OK, data=serializer.data["cart_items"]

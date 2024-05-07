@@ -2,6 +2,7 @@ from rest_framework import serializers
 
 from .models import User, Role, Cart, CartItem
 from apps.product.models import Product
+from apps.product.serializers import ProductSerializer, ProductImageSerializer
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -51,10 +52,21 @@ class RoleSerializer(serializers.ModelSerializer):
         fields = ["id", "name"]
 
 
+class ProductSerializerForCart(serializers.ModelSerializer):
+    images = ProductImageSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Product
+        fields = ["id", "name", "price", "images"]
+
+
 class CartItemSerializer(serializers.ModelSerializer):
+    product = ProductSerializerForCart()
+
     class Meta:
         model = CartItem
         fields = ["id", "product", "size", "quantity", "cart"]
+        extra_kwargs = {"cart": {"write_only": True}}
 
 
 class UploadedCartItemsSerializer(serializers.Serializer):
@@ -72,6 +84,7 @@ class CartSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cart
         fields = ["id", "user", "uploaded_cart_items", "cart_items"]
+        extra_kwargs = {"user": {"write_only": True}}
 
     def create(self, validated_data):
         uploaded_cart_items = validated_data.pop("uploaded_cart_items")
