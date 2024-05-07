@@ -1,9 +1,12 @@
+import uuid
+
 from django.db import models
 
 from apps.user.models import User
 
 
 class Product(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(
         max_length=300, blank=True, default="", verbose_name="product_name"
     )
@@ -39,6 +42,7 @@ class Product(models.Model):
 
 
 class ProductImage(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     product = models.ForeignKey(
         Product, on_delete=models.CASCADE, related_name="images"
     )
@@ -51,6 +55,7 @@ class ProductImage(models.Model):
 
 
 class ProductSize(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     size = models.CharField(
         blank=True, default="", verbose_name="product_size"
     )
@@ -70,6 +75,7 @@ class ProductSize(models.Model):
 
 
 class Cart(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="user_cart"
     )
@@ -83,6 +89,7 @@ class Cart(models.Model):
 
 
 class CartItem(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     cart = models.ForeignKey(
         Cart, on_delete=models.CASCADE, related_name="cart_items"
     )

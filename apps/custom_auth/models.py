@@ -1,3 +1,5 @@
+import uuid
+
 from django.db import models
 from django.utils import timezone
 
@@ -6,6 +8,7 @@ from apps.user.models import User
 
 # Create your models here.
 class ForgotPasswordOTP(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     otp_code = models.CharField(max_length=6)
     user = models.ForeignKey(
         User, related_name="forgot_password_otp", on_delete=models.CASCADE

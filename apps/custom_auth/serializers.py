@@ -1,6 +1,7 @@
 # serializers.py
 import json
 
+from django.core.serializers.json import DjangoJSONEncoder
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
@@ -29,7 +30,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         user = self.user
 
         user_data = {
-            "id": user.id,
+            "id": str(user.id),
             "email": user.email,
             "roles": [role.name for role in user.roles.all()],
         }
