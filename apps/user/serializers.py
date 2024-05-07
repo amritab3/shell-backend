@@ -1,5 +1,7 @@
-from .models import User, Role
 from rest_framework import serializers
+
+from .models import User, Role, Cart, CartItem
+from apps.product.models import Product
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -47,3 +49,45 @@ class RoleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Role
         fields = ["id", "name"]
+
+
+class CartItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CartItem
+        fields = ["id", "product", "size", "quantity", "cart"]
+
+
+class UploadedCartItemsSerializer(serializers.Serializer):
+    product = serializers.IntegerField(required=True)
+    size = serializers.CharField(required=True, max_length=5)
+    quantity = serializers.IntegerField(required=True, min_value=1)
+
+
+class CartSerializer(serializers.ModelSerializer):
+    uploaded_cart_items = serializers.ListField(
+        child=UploadedCartItemsSerializer(), write_only=True
+    )
+    cart_items = CartItemSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Cart
+        fields = ["id", "user", "uploaded_cart_items", "cart_items"]
+
+    def create(self, validated_data):
+        uploaded_cart_items = validated_data.pop("uploaded_cart_items")
+
+        cart = Cart.objects.create(**validated_data)
+
+        for item in uploaded_cart_items:
+            try:
+                product = Product.objects.get(id=item["product"])
+            except Product.DoesNotExist:
+                product = None
+            CartItem.objects.create(
+                cart=cart,
+                product=product,
+                size=item["size"],
+                quantity=item["quantity"],
+            )
+
+        return cart

@@ -6,7 +6,6 @@ from .views import (
     MenProductsViewSet,
     WomenProductsViewSet,
     KidsProductsViewSet,
-    CartViewSet,
 )
 
 router = DefaultRouter()
@@ -14,7 +13,6 @@ router = DefaultRouter()
 router.register(r"men", MenProductsViewSet)
 router.register(r"women", WomenProductsViewSet)
 router.register(r"kids", KidsProductsViewSet)
-router.register(r"cart", CartViewSet)
 router.register(r"", ProductsViewSet)
 
 urlpatterns = [path("", include(router.urls))]

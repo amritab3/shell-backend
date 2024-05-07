@@ -6,6 +6,8 @@ from django.contrib.auth.models import AbstractBaseUser
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import PermissionsMixin
 
+from apps.product.models import Product
+
 GENDER_CHOICES = (
     ("male", "Male"),
     ("female", "Female"),
@@ -67,3 +69,38 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
+
+
+class Cart(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="user_cart"
+    )
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name="created_at"
+    )
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="updated_at")
+
+    def __str__(self):
+        return self.user.email
+
+
+class CartItem(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    cart = models.ForeignKey(
+        Cart, on_delete=models.CASCADE, related_name="cart_items"
+    )
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="product_cart"
+    )
+    size = models.CharField(
+        blank=True, default="", verbose_name="cart_item_size"
+    )
+    quantity = models.IntegerField(default=1, null=True, blank=True)
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name="created_at"
+    )
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="updated_at")
+
+    def __str__(self):
+        return self.product.name + " - cart:  " + str(self.cart.id)
