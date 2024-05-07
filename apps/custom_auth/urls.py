@@ -19,6 +19,11 @@ urlpatterns = [
         name="token_refresh",
     ),
     path(
+        "token/verify/",
+        jwt_views.TokenVerifyView.as_view(),
+        name="token_verify",
+    ),
+    path(
         "generate-otp/",
         GenerateForgotPasswordOTPView.as_view(),
         name="generate_forgot_password_otp",

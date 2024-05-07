@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     "rest_framework_simplejwt",
+    "rest_framework_simplejwt.token_blacklist",
     "apps.user",
     "apps.custom_auth",
     "apps.product",
@@ -168,6 +169,8 @@ CORS_ALLOWED_ORIGINS = [
 # SimpleJWT settings
 SIMPLE_JWT = {
     "TOKEN_OBTAIN_SERIALIZER": "apps.custom_auth.serializers.MyTokenObtainPairSerializer",
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+    "ACCESS_TOKEN_LIFETIME": timedelta(seconds=30),
+    "REFRESH_TOKEN_LIFETIME": timedelta(minutes=1),
+    "ROTATE_REFRESH_TOKENS": True,
+    "BLACKLIST_AFTER_ROTATION": True,
 }
