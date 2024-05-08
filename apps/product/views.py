@@ -51,7 +51,8 @@ class ProductsViewSet(viewsets.ModelViewSet):
 class InstoreMenProductsViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.filter(type="instore", gender="men")
     serializer_class = ProductSerializer
-    filter_backends = []
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ["category"]
 
 
 class InstoreWomenProductsViewSet(viewsets.ModelViewSet):
