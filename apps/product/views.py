@@ -2,10 +2,12 @@ import json
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from rest_framework.parsers import MultiPartParser, FormParser
+from django_filters.rest_framework import DjangoFilterBackend
+
 
 from .models import Product, PRODUCT_GENDER_CHOICES, PRODUCT_CATEGORY_CHOICES
 from .serializers import ProductSerializer
-from rest_framework.parsers import MultiPartParser, FormParser
 
 
 class ProductsViewSet(viewsets.ModelViewSet):
@@ -55,11 +57,15 @@ class InstoreMenProductsViewSet(viewsets.ModelViewSet):
 class InstoreWomenProductsViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.filter(type="instore", gender="women")
     serializer_class = ProductSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ["category"]
 
 
 class InstoreKidsProductsViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.filter(type="instore", gender="kids")
     serializer_class = ProductSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ["category"]
 
 
 class ThriftProductsViewSet(viewsets.ModelViewSet):
