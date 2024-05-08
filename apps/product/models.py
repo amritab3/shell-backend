@@ -6,6 +6,8 @@ PRODUCT_GENDER_CHOICES = (("men", "Men"), ("women", "Women"), ("kids", "Kids"))
 
 PRODUCT_CATEGORY_CHOICES = (("pants", "Pants"), ("shirts", "Shirts"))
 
+PRODUCT_TYPE_CHOICES = (("instore", "Instore"), ("thrift", "Thrift"))
+
 
 class Product(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -41,6 +43,13 @@ class Product(models.Model):
         choices=PRODUCT_GENDER_CHOICES,
         default="",
         verbose_name="product_gender",
+    )
+    type = models.CharField(
+        max_length=20,
+        blank=True,
+        choices=PRODUCT_TYPE_CHOICES,
+        default="",
+        verbose_name="product_type",
     )
     created_at = models.DateTimeField(
         auto_now_add=True, verbose_name="created_at"

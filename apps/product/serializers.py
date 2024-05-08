@@ -49,6 +49,7 @@ class ProductSerializer(serializers.ModelSerializer):
             "category",
             "sizes",
             "gender",
+            "type",
             "uploaded_sizes",
             "images",
             "uploaded_images",

@@ -46,16 +46,22 @@ class ProductsViewSet(viewsets.ModelViewSet):
         return Response(product_category_list)
 
 
-class MenProductsViewSet(viewsets.ModelViewSet):
-    queryset = Product.objects.filter(gender="men")
+class InstoreMenProductsViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.filter(type="instore", gender="men")
+    serializer_class = ProductSerializer
+    filter_backends = []
+
+
+class InstoreWomenProductsViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.filter(type="instore", gender="women")
     serializer_class = ProductSerializer
 
 
-class WomenProductsViewSet(viewsets.ModelViewSet):
-    queryset = Product.objects.filter(gender="women")
+class InstoreKidsProductsViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.filter(type="instore", gender="kids")
     serializer_class = ProductSerializer
 
 
-class KidsProductsViewSet(viewsets.ModelViewSet):
-    queryset = Product.objects.filter(gender="kids")
+class ThriftProductsViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.filter(type="thrift")
     serializer_class = ProductSerializer
