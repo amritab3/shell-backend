@@ -2,6 +2,10 @@ import uuid
 
 from django.db import models
 
+PRODUCT_GENDER_CHOICES = (("men", "Men"), ("women", "Women"), ("kids", "Kids"))
+
+PRODUCT_CATEGORY_CHOICES = (("pants", "Pants"), ("shirts", "Shirts"))
+
 
 class Product(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -25,10 +29,18 @@ class Product(models.Model):
         max_length=50, blank=True, default="", verbose_name="product_material"
     )
     category = models.CharField(
-        max_length=30, blank=True, default="", verbose_name="product_category"
+        max_length=30,
+        blank=True,
+        choices=PRODUCT_CATEGORY_CHOICES,
+        default="",
+        verbose_name="product_category",
     )
     gender = models.CharField(
-        max_length=30, blank=True, default="", verbose_name="product_gender"
+        max_length=30,
+        blank=True,
+        choices=PRODUCT_GENDER_CHOICES,
+        default="",
+        verbose_name="product_gender",
     )
     created_at = models.DateTimeField(
         auto_now_add=True, verbose_name="created_at"
