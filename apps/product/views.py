@@ -1,4 +1,6 @@
 import json
+
+from rest_framework.filters import OrderingFilter
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -51,22 +53,28 @@ class ProductsViewSet(viewsets.ModelViewSet):
 class InstoreMenProductsViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.filter(type="instore", gender="men")
     serializer_class = ProductSerializer
-    filter_backends = [DjangoFilterBackend]
+
+    filter_backends = [DjangoFilterBackend, OrderingFilter]
     filterset_fields = ["category"]
+    ordering_fields = ["name", "price"]
 
 
 class InstoreWomenProductsViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.filter(type="instore", gender="women")
     serializer_class = ProductSerializer
-    filter_backends = [DjangoFilterBackend]
+
+    filter_backends = [DjangoFilterBackend, OrderingFilter]
     filterset_fields = ["category"]
+    ordering_fields = ["name", "price"]
 
 
 class InstoreKidsProductsViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.filter(type="instore", gender="kids")
     serializer_class = ProductSerializer
-    filter_backends = [DjangoFilterBackend]
+
+    filter_backends = [DjangoFilterBackend, OrderingFilter]
     filterset_fields = ["category"]
+    ordering_fields = ["name", "price"]
 
 
 class ThriftProductsViewSet(viewsets.ModelViewSet):
