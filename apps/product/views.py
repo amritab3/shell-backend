@@ -10,6 +10,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 from .models import Product, PRODUCT_GENDER_CHOICES, PRODUCT_CATEGORY_CHOICES
 from .serializers import ProductSerializer
+from backend.pagination import CustomPageNumberPagination
 
 
 class ProductsViewSet(viewsets.ModelViewSet):
@@ -60,8 +61,11 @@ class InstoreMenProductsViewSet(viewsets.ModelViewSet):
 
 
 class InstoreWomenProductsViewSet(viewsets.ModelViewSet):
-    queryset = Product.objects.filter(type="instore", gender="women")
+    queryset = Product.objects.filter(type="instore", gender="women").order_by(
+        "-created_at"
+    )
     serializer_class = ProductSerializer
+    pagination_class = CustomPageNumberPagination
 
     filter_backends = [DjangoFilterBackend, OrderingFilter]
     filterset_fields = ["category"]
