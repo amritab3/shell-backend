@@ -1,0 +1,25 @@
+[
+  {
+    "model": "user.role",
+    "pk": "6a46b24d-9820-4a8e-938a-77960943905f",
+    "fields":
+      {
+        "name": "Admin"
+      }
+  },
+  {
+    "model": "user.role",
+    "pk": "77599d30-2cb3-4506-8197-fcfa2c6deb5d",
+    "fields":
+    {
+      "name": "Customer"
+    }
+  },
+  {"model": "user.role",
+    "pk": "8d2f7dec-83ec-45d9-bf34-a40e3389be25",
+    "fields":
+    {
+      "name": "SuperAdmin"
+    }
+  }
+]

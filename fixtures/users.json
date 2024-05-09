@@ -1,0 +1,24 @@
+[
+  {
+    "model": "user.user",
+    "pk": "98ac1153-85a1-4380-92e1-86fb3493aac5",
+    "fields":
+      {
+        "password": "pbkdf2_sha256$600000$a1OzYpNlFMSrt22AONLxvJ$YoZ9vT3qvIBjzDslbP/z0EVyRPdJtgntCVef2Of1SWU=",
+        "email": "admin@admin.com",
+        "date_joined": "2024-05-07T09:05:29.724Z",
+        "last_login": "2024-05-07T18:22:15.116Z",
+        "first_name": "Admin",
+        "last_name": "Admin",
+        "mobile_no": "9812121212",
+        "avatar": "user_avatar/IMG_2821_ojcoGRR.jpg",
+        "is_staff": true,
+        "is_superuser": true,
+        "is_active": true,
+        "gender": "male",
+        "groups": [],
+        "user_permissions": [],
+        "roles": ["6a46b24d-9820-4a8e-938a-77960943905f", "8d2f7dec-83ec-45d9-bf34-a40e3389be25"]
+      }
+  }
+]
