@@ -16,6 +16,7 @@ from .serializers import (
 )
 from .models import User, CartItem, Cart
 from apps.product.models import Product, ProductSize
+from backend.pagination import CustomPageNumberPagination
 
 
 class CreateUserView(generics.CreateAPIView):
@@ -28,6 +29,7 @@ class ListUserView(generics.ListAPIView):
     queryset = User.objects.all()
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated, IsAdminUser]
+    pagination_class = CustomPageNumberPagination
 
 
 class RetrieveUpdateDeleteUser(generics.RetrieveUpdateDestroyAPIView):
