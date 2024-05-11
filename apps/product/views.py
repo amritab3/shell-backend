@@ -8,7 +8,12 @@ from rest_framework.parsers import MultiPartParser, FormParser
 from django_filters.rest_framework import DjangoFilterBackend
 
 
-from .models import Product, PRODUCT_GENDER_CHOICES, PRODUCT_CATEGORY_CHOICES
+from .models import (
+    Product,
+    PRODUCT_GENDER_CHOICES,
+    PRODUCT_CATEGORY_CHOICES,
+    PRODUCT_SIZES_CHOICES,
+)
 from .serializers import ProductSerializer, ThriftProductSerializer
 from backend.pagination import CustomPageNumberPagination
 
@@ -64,6 +69,19 @@ class ProductsViewSet(viewsets.ModelViewSet):
             for value, label in PRODUCT_CATEGORY_CHOICES
         ]
         return Response(product_category_list)
+
+    @action(
+        detail=False,
+        methods=["GET"],
+        url_path="product-size-choice",
+        url_name="product-size-choice",
+    )
+    def product_size_choice(self, request):
+        product_size_list = [
+            {"label": label, "value": value}
+            for value, label in PRODUCT_SIZES_CHOICES
+        ]
+        return Response(product_size_list)
 
 
 class InstoreMenProductsViewSet(viewsets.ModelViewSet):

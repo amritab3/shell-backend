@@ -4,9 +4,26 @@ from django.db import models
 
 PRODUCT_GENDER_CHOICES = (("men", "Men"), ("women", "Women"), ("kids", "Kids"))
 
-PRODUCT_CATEGORY_CHOICES = (("pants", "Pants"), ("shirts", "Shirts"))
+PRODUCT_CATEGORY_CHOICES = (
+    ("pants", "Pants"),
+    ("shirts", "Shirts"),
+    ("dress", "Dress"),
+    ("sweaters", "Sweaters"),
+    ("jackets", "Jackets"),
+    ("shoes", "Shoes"),
+    ("others", "Others"),
+)
 
 PRODUCT_TYPE_CHOICES = (("instore", "Instore"), ("thrift", "Thrift"))
+
+PRODUCT_SIZES_CHOICES = (
+    ("xs", "XS"),
+    ("s", "S"),
+    ("m", "M"),
+    ("l", "L"),
+    ("xl", "XL"),
+    ("xxl", "XXL"),
+)
 
 
 class Product(models.Model):
@@ -76,7 +93,10 @@ class ProductImage(models.Model):
 class ProductSize(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     size = models.CharField(
-        blank=True, default="", verbose_name="product_size"
+        blank=True,
+        default="",
+        verbose_name="product_size",
+        choices=PRODUCT_SIZES_CHOICES,
     )
     size_inventory = models.IntegerField(
         default=0, verbose_name="product_size_inventory"
