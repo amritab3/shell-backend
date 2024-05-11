@@ -1,7 +1,7 @@
 import json
 
 from rest_framework.filters import OrderingFilter
-from rest_framework import viewsets
+from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser, FormParser
@@ -9,18 +9,33 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 
 from .models import Product, PRODUCT_GENDER_CHOICES, PRODUCT_CATEGORY_CHOICES
-from .serializers import ProductSerializer
+from .serializers import ProductSerializer, ThriftProductSerializer
 from backend.pagination import CustomPageNumberPagination
 
 
 class ProductsViewSet(viewsets.ModelViewSet):
-    queryset = Product.objects.all()
+    queryset = Product.objects.filter(type="instore").order_by("-created_at")
     serializer_class = ProductSerializer
     parser_classes = [MultiPartParser, FormParser]
+    pagination_class = CustomPageNumberPagination
+
+    filter_backends = [DjangoFilterBackend, OrderingFilter]
+    filterset_fields = ["category"]
+    ordering_fields = ["name", "price"]
 
     def create(self, request, *args, **kwargs):
         uploaded_sizes = json.loads(request.data.get("uploaded_sizes"))
+
+        if not uploaded_sizes:
+            return Response(
+                status=status.HTTP_400_BAD_REQUEST,
+                data={"message": "Please  provide the sizes"},
+            )
+
+        request.data._mutable = True
         request.data["uploaded_sizes"] = uploaded_sizes
+        request.data["type"] = "instore"
+        request.data._mutable = False
 
         return super(ProductsViewSet, self).create(request, *args, **kwargs)
 
@@ -84,5 +99,31 @@ class InstoreKidsProductsViewSet(viewsets.ModelViewSet):
 
 
 class ThriftProductsViewSet(viewsets.ModelViewSet):
-    queryset = Product.objects.filter(type="thrift")
-    serializer_class = ProductSerializer
+    queryset = Product.objects.filter(type="thrift").order_by("-created_at")
+    serializer_class = ThriftProductSerializer
+    parser_classes = [MultiPartParser, FormParser]
+    pagination_class = CustomPageNumberPagination
+
+    filter_backends = [DjangoFilterBackend, OrderingFilter]
+    filterset_fields = ["category"]
+    ordering_fields = ["name", "price"]
+
+    def create(self, request, *args, **kwargs):
+        uploaded_sizes = json.loads(request.data.get("uploaded_sizes"))
+
+        if not uploaded_sizes:
+            return Response(
+                status=status.HTTP_400_BAD_REQUEST,
+                data={"message": "Please  provide the sizes"},
+            )
+
+        request.data._mutable = True
+        request.data["uploaded_sizes"] = uploaded_sizes
+        request.data["type"] = "thrift"
+        request.data._mutable = False
+
+        print("GGG", request.data)
+
+        return super(ThriftProductsViewSet, self).create(
+            request, *args, **kwargs
+        )
