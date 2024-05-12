@@ -7,6 +7,7 @@ PRODUCT_GENDER_CHOICES = (("men", "Men"), ("women", "Women"), ("kids", "Kids"))
 PRODUCT_CATEGORY_CHOICES = (
     ("pants", "Pants"),
     ("shirts", "Shirts"),
+    ("tshirts", "TShirts"),
     ("dress", "Dress"),
     ("sweaters", "Sweaters"),
     ("jackets", "Jackets"),
