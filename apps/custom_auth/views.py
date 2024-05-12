@@ -23,7 +23,7 @@ class GenerateForgotPasswordOTPView(views.APIView):
             user = User.objects.get(email=email)
         except User.DoesNotExist:
             return Response(
-                {"message": "User does not exist."},
+                {"message": {"email": "User with this email does not exist"}},
                 status=status.HTTP_404_NOT_FOUND,
             )
 
