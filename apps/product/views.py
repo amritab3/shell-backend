@@ -145,8 +145,6 @@ class ThriftProductsViewSet(viewsets.ModelViewSet):
         request.data["type"] = "thrift"
         request.data._mutable = False
 
-        print("GGG", request.data)
-
         return super(ThriftProductsViewSet, self).create(
             request, *args, **kwargs
         )
