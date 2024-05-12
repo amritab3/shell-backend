@@ -1,3 +1,8 @@
+import os
+
+from django.template.loader import render_to_string
+from django.core.mail import EmailMultiAlternatives
+
 from rest_framework import views
 from rest_framework import status
 from rest_framework.response import Response
@@ -41,6 +46,20 @@ class GenerateForgotPasswordOTPView(views.APIView):
         otp_instance = ForgotPasswordOTP.objects.create(
             user=user, otp_code=otp_code
         )
+
+        if otp_instance:
+            merge_data = {"OTP_CODE": otp_code}
+            html_body = render_to_string(
+                "forgot_password_otp.html", merge_data
+            )
+            message = EmailMultiAlternatives(
+                subject="Password reset OTP",
+                body="password reset otp",
+                from_email=os.environ.get("FROM_EMAIL"),
+                to=[email],
+            )
+            message.attach_alternative(html_body, "text/html")
+            message.send(fail_silently=False)
 
         serializer = OTPModelSerializer(otp_instance)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
