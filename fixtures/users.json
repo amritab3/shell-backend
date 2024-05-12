@@ -11,7 +11,7 @@
         "first_name": "Super",
         "last_name": "Admin",
         "mobile_no": "9812121212",
-        "avatar": "fixtures/user_avatar/USER_AVATAR_1",
+        "avatar": "fixtures/user_avatar/USER_AVATAR_1.png",
         "is_staff": true,
         "is_superuser": true,
         "is_active": true,
