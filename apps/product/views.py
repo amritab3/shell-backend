@@ -1,6 +1,6 @@
 import json
 
-from rest_framework.filters import OrderingFilter
+from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -24,9 +24,10 @@ class ProductsViewSet(viewsets.ModelViewSet):
     parser_classes = [MultiPartParser, FormParser]
     pagination_class = CustomPageNumberPagination
 
-    filter_backends = [DjangoFilterBackend, OrderingFilter]
+    filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
     filterset_fields = ["category"]
     ordering_fields = ["name", "price"]
+    search_fields = ["name"]
 
     def create(self, request, *args, **kwargs):
         uploaded_sizes = json.loads(request.data.get("uploaded_sizes"))
@@ -89,9 +90,10 @@ class InstoreMenProductsViewSet(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
     pagination_class = CustomPageNumberPagination
 
-    filter_backends = [DjangoFilterBackend, OrderingFilter]
+    filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
     filterset_fields = ["category"]
     ordering_fields = ["name", "price"]
+    search_fields = ["name"]
 
 
 class InstoreWomenProductsViewSet(viewsets.ModelViewSet):
@@ -101,9 +103,10 @@ class InstoreWomenProductsViewSet(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
     pagination_class = CustomPageNumberPagination
 
-    filter_backends = [DjangoFilterBackend, OrderingFilter]
+    filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
     filterset_fields = ["category"]
     ordering_fields = ["name", "price"]
+    search_fields = ["name"]
 
 
 class InstoreKidsProductsViewSet(viewsets.ModelViewSet):
@@ -111,9 +114,10 @@ class InstoreKidsProductsViewSet(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
     pagination_class = CustomPageNumberPagination
 
-    filter_backends = [DjangoFilterBackend, OrderingFilter]
+    filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
     filterset_fields = ["category"]
     ordering_fields = ["name", "price"]
+    search_fields = ["name"]
 
 
 class ThriftProductsViewSet(viewsets.ModelViewSet):
@@ -122,9 +126,10 @@ class ThriftProductsViewSet(viewsets.ModelViewSet):
     parser_classes = [MultiPartParser, FormParser]
     pagination_class = CustomPageNumberPagination
 
-    filter_backends = [DjangoFilterBackend, OrderingFilter]
+    filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
     filterset_fields = ["category"]
     ordering_fields = ["name", "price"]
+    search_fields = ["name"]
 
     def create(self, request, *args, **kwargs):
         uploaded_sizes = json.loads(request.data.get("uploaded_sizes"))
