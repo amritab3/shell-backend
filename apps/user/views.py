@@ -90,6 +90,26 @@ class RolesViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated, IsAdminUser]
     pagination_class = CustomPageNumberPagination
 
+    def create(self, request, *args, **kwargs):
+        data = request.data
+        data_lowercase = {"name": data["name"].lower()}
+
+        request.data.update(data_lowercase)
+
+        return super(RolesViewSet, self).create(request, *args, **kwargs)
+
+    @action(
+        detail=False, methods=["get"], url_path="choices", url_name="choices"
+    )
+    def user_role_choices(self, request, *args, **kwargs):
+        roles = Role.objects.all()
+        role_choices = [
+            {"label": role.name.capitalize(), "value": role.name.lower()}
+            for role in roles
+        ]
+
+        return Response(status=status.HTTP_200_OK, data=role_choices)
+
 
 class UserAdminViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
