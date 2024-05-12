@@ -13,8 +13,9 @@ from .serializers import (
     UserAdminSerializer,
     CartSerializer,
     CartItemSerializer,
+    RoleSerializer,
 )
-from .models import User, CartItem, Cart
+from .models import User, CartItem, Cart, Role
 from apps.product.models import Product, ProductSize
 from backend.pagination import CustomPageNumberPagination
 
@@ -83,8 +84,11 @@ def validate_request(request):
         raise APIException({"detail": "Password cannot be updated from here."})
 
 
-class ListRolesView(generics.ListAPIView):
+class RolesViewSet(viewsets.ModelViewSet):
+    queryset = Role.objects.all().order_by("-created_at")
+    serializer_class = RoleSerializer
     permission_classes = [IsAuthenticated, IsAdminUser]
+    pagination_class = CustomPageNumberPagination
 
 
 class UserAdminViewSet(viewsets.ModelViewSet):

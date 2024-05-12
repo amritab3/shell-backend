@@ -9,12 +9,14 @@ from .views import (
     RetrieveUpdateDeleteUser,
     UserAdminViewSet,
     CartViewSet,
+    RolesViewSet,
 )
 
 router1 = DefaultRouter()
 router2 = DefaultRouter()
 
 router1.register(r"user", UserAdminViewSet)
+router1.register(r"roles", RolesViewSet)
 router2.register("", CartViewSet, basename="user_cart")
 
 urlpatterns = [
