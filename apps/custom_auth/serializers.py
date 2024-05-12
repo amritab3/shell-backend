@@ -16,6 +16,15 @@ class OTPModelSerializer(serializers.ModelSerializer):
 
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+    default_error_messages = {
+        "no_active_account": {
+            "message": {
+                "email": "",
+                "password": "Username or Password does not match.",
+            }
+        }
+    }
+
     @classmethod
     def get_token(cls, user):
         token = super().get_token(user)
