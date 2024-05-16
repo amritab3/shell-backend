@@ -32,7 +32,7 @@
         "first_name": "Customer",
         "last_name": "User 1",
         "mobile_no": "9801010101",
-        "avatar": "fixtures/user_avatar/USER_AVATAR_2",
+        "avatar": "fixtures/user_avatar/USER_AVATAR_2.png",
         "is_staff": false,
         "is_superuser": false,
         "is_active": true,
