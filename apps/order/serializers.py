@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from datetime import date, timedelta
 
 from .models import Order, OrderItem, OrderPayment
 from apps.product.models import ProductSize
@@ -48,6 +49,7 @@ class OrderSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         cart_items = validated_data.pop("cart_items")
+        validated_data["delivery_date"] = date.today() + timedelta(days=2)
 
         order = Order.objects.create(**validated_data)
 
