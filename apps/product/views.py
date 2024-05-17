@@ -13,8 +13,13 @@ from .models import (
     PRODUCT_GENDER_CHOICES,
     PRODUCT_CATEGORY_CHOICES,
     PRODUCT_SIZES_CHOICES,
+    ProductComment,
 )
-from .serializers import ProductSerializer, ThriftProductSerializer
+from .serializers import (
+    ProductSerializer,
+    ThriftProductSerializer,
+    ProductCommentSerializer,
+)
 from backend.pagination import CustomPageNumberPagination
 
 
@@ -148,3 +153,25 @@ class ThriftProductsViewSet(viewsets.ModelViewSet):
         return super(ThriftProductsViewSet, self).create(
             request, *args, **kwargs
         )
+
+
+class ProductCommentsViewSet(viewsets.ModelViewSet):
+    queryset = ProductComment.objects.all().order_by("-created_at")
+    serializer_class = ProductCommentSerializer
+    pagination_class = CustomPageNumberPagination
+
+    def create(self, request, *args, **kwargs):
+        user = request.user.id
+        product = kwargs.get("product_id")
+
+        request.data["user"] = user
+        request.data["product"] = product
+
+        return super(ProductCommentsViewSet, self).create(
+            request, *args, **kwargs
+        )
+
+    def get_queryset(self):
+        product = self.kwargs.get("product_id")
+
+        return self.queryset.filter(product=product)

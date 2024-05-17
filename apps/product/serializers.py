@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Product, ProductSize, ProductImage
+from .models import Product, ProductSize, ProductImage, ProductComment
 
 
 class ProductSizeSerializer(serializers.ModelSerializer):
@@ -21,6 +21,21 @@ class ProductImageSerializer(serializers.ModelSerializer):
         extra_kwargs = {"product": {"write_only": True}}
 
 
+class ProductCommentSerializer(serializers.ModelSerializer):
+    created_date = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = ProductComment
+        fields = ["id", "message", "user", "created_date", "product"]
+        extra_kwargs = {
+            "product": {"write_only": True},
+            "user": {"write_only": True},
+        }
+
+    def get_created_date(self, obj):
+        return obj.created_at.strftime("%Y-%m-%d")
+
+
 class ProductSerializer(serializers.ModelSerializer):
     sizes = ProductSizeSerializer(many=True, read_only=True)
     uploaded_sizes = serializers.ListField(
@@ -34,6 +49,8 @@ class ProductSerializer(serializers.ModelSerializer):
         ),
         write_only=True,
     )
+
+    comments = ProductCommentSerializer(many=True, read_only=True)
 
     class Meta:
         model = Product
@@ -53,6 +70,7 @@ class ProductSerializer(serializers.ModelSerializer):
             "uploaded_sizes",
             "images",
             "uploaded_images",
+            "comments",
         ]
 
     def create(self, validated_data):

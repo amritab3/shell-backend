@@ -7,6 +7,7 @@ from .views import (
     InstoreWomenProductsViewSet,
     InstoreKidsProductsViewSet,
     ThriftProductsViewSet,
+    ProductCommentsViewSet,
 )
 
 router = DefaultRouter()
@@ -19,4 +20,10 @@ router.register(r"thrift", ThriftProductsViewSet)
 
 router.register(r"", ProductsViewSet)
 
-urlpatterns = [path("", include(router.urls))]
+router2 = DefaultRouter()
+router2.register(r"comments", ProductCommentsViewSet)
+
+urlpatterns = [
+    path("<str:product_id>/feedback/", include(router2.urls)),
+    path("", include(router.urls)),
+]

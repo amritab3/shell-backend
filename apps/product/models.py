@@ -113,3 +113,23 @@ class ProductSize(models.Model):
 
     def __str__(self):
         return self.size + " - " + self.product.name
+
+
+class ProductComment(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="comments"
+    )
+    user = models.ForeignKey(
+        "user.User", on_delete=models.CASCADE, related_name="comments"
+    )
+
+    message = models.TextField(verbose_name="product_comment")
+
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name="created_at"
+    )
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="updated_at")
+
+    def __str__(self):
+        return self.product.name + " - " + self.user.email

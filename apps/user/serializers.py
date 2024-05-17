@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from .models import User, Role, Cart, CartItem
 from apps.product.models import Product
-from apps.product.serializers import ProductSerializer, ProductImageSerializer
+from apps.product.serializers import ProductImageSerializer
 
 
 class UserSerializer(serializers.ModelSerializer):
