@@ -1,0 +1,686 @@
+[
+    {
+      "model": "product.product",
+      "pk": "066d477c-ea4b-488b-bee2-fe24a21a3ac1",
+      "fields": {
+        "name": "TIE DYE PRINT SATIN EFFECT SHIRT",
+        "description": "Flowy shirt with lapel collar with V-neck and long sleeves. Front button closure.",
+        "price": 1750,
+        "inventory": 12,
+        "color": "Pink",
+        "style": "Tie Die Print",
+        "material": "polyester",
+        "category": "shirts",
+        "gender": "women",
+        "type": "instore",
+        "created_at": "2024-05-17T10:52:07.285Z",
+        "updated_at": "2024-05-17T10:52:07.285Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "12d4b03b-2b13-487f-9578-0e47b51c9501",
+      "fields": {
+        "name": "PLEATED POPLIN DRESS",
+        "description": "This dress is part of the True Neutrals collection. Made of 97% cotton. Front and back feature a V-neckline. Sleeveless design with side elastic ruching. As a special detail, this piece has a large front pleat.",
+        "price": 2200,
+        "inventory": 12,
+        "color": "Pastel Mauve",
+        "style": "Pleated dress",
+        "material": "cotton",
+        "category": "dresses",
+        "gender": "kids",
+        "type": "instore",
+        "created_at": "2024-05-17T11:17:08.551Z",
+        "updated_at": "2024-05-17T11:17:08.551Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "13e6fcee-7c61-4404-a6f9-313177a57936",
+      "fields": {
+        "name": "LINEN AND COTTON BLEND DRESS",
+        "description": "This dress with a straight cut is part of the True Neutrals collection. Made of 50% cotton and 50% linen fabric. This sleeveless design has a round neck with a back buttoned teardrop. The front features two hidden in-seam pockets. As a detail, it is finished with tonal topstitching.",
+        "price": 1750,
+        "inventory": 12,
+        "color": "Yellow",
+        "style": "Dress",
+        "material": "Linen, Cotton",
+        "category": "dresses",
+        "gender": "kids",
+        "type": "instore",
+        "created_at": "2024-05-17T11:18:25.570Z",
+        "updated_at": "2024-05-17T11:18:25.570Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "32309172-60be-4c0d-a13d-b9221763dfb4",
+      "fields": {
+        "name": "STRIPED KNIT DRESS",
+        "description": "Knit dress with straight neckline and straps.",
+        "price": 1899,
+        "inventory": 4,
+        "color": "Green",
+        "style": "Knit dress",
+        "material": "polyester, cotton",
+        "category": "dresses",
+        "gender": "kids",
+        "type": "instore",
+        "created_at": "2024-05-17T11:46:35.729Z",
+        "updated_at": "2024-05-17T11:46:35.729Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "32bcbd05-ca27-4c6e-8451-d2cd21d3c500",
+      "fields": {
+        "name": "SWISS DOT DRESS WITH EMBROIDERY",
+        "description": "V-neckline midi dress with long balloon sleeves and cuffs. Contrasting floral embroidery detail. Adjustable tie at chest. Tiered skirt.",
+        "price": 1950,
+        "inventory": 4,
+        "color": "Green",
+        "style": "Embroidery",
+        "material": "cotton",
+        "category": "dresses",
+        "gender": "women",
+        "type": "instore",
+        "created_at": "2024-05-17T10:56:59.943Z",
+        "updated_at": "2024-05-17T10:58:22.590Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "34f0e10c-3094-41d7-acfc-91584f3c8f54",
+      "fields": {
+        "name": "LINEN BLEND DOUBLE BREASTED BLAZER",
+        "description": "Linen blend blazer. Lapel collar and below-the-elbow length cuffed sleeves. Side vents at hem. Front double breasted buttoned closure.",
+        "price": 2600,
+        "inventory": 8,
+        "color": "Light Sand",
+        "style": "Double Breasted Blazer",
+        "material": "linen, viscose",
+        "category": "blazers",
+        "gender": "women",
+        "type": "instore",
+        "created_at": "2024-05-17T10:42:21.859Z",
+        "updated_at": "2024-05-17T10:42:21.859Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "3dad2c1e-e5a1-431f-b3f5-e67ae67b3749",
+      "fields": {
+        "name": "FLORAL EMBROIDERED SHIRT",
+        "description": "Relaxed fit shirt. Spread collar and short sleeves. All over raised embroidery appliquΘs. Front button closure.",
+        "price": 1950,
+        "inventory": 5,
+        "color": "OCHER",
+        "style": "Embroidery",
+        "material": "cotton",
+        "category": "shirts",
+        "gender": "men",
+        "type": "instore",
+        "created_at": "2024-05-17T07:23:31.793Z",
+        "updated_at": "2024-05-17T07:23:31.793Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "425782dc-1afc-4c93-abcc-d6ee2dde8932",
+      "fields": {
+        "name": "STRIPED SWEATSHIRT WITH EMBROIDERY",
+        "description": "Round neck sweatshirt with long sleeves. Vertical stripe print. Embroidered appliquΘ at chest.",
+        "price": 2250,
+        "inventory": 9,
+        "color": "GREEN",
+        "style": "Embroidery",
+        "material": "cotton, polyester",
+        "category": "others",
+        "gender": "kids",
+        "type": "instore",
+        "created_at": "2024-05-17T11:29:29.992Z",
+        "updated_at": "2024-05-17T11:29:29.992Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "430fbf0d-95b2-48c8-be04-e8b46e962ba8",
+      "fields": {
+        "name": "RUBBERIZED EMBROIDERED POPLIN SHIRT",
+        "description": "Shirt with lapel collar and long sleeves. Matching tonal rubberized embroidery. Front button closure.",
+        "price": 1850,
+        "inventory": 10,
+        "color": "Sky Blue",
+        "style": "Embroidery Shirt",
+        "material": "Cotton",
+        "category": "shirts",
+        "gender": "women",
+        "type": "instore",
+        "created_at": "2024-05-17T10:49:47.307Z",
+        "updated_at": "2024-05-17T10:49:47.307Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "45c897d3-722c-430c-9356-57bf2e58e1b7",
+      "fields": {
+        "name": "TEXTURED PLAID SHIRT",
+        "description": "Relaxed fit cotton shirt. Lapel collar and short sleeves. Chest patch pocket. Front button closure.",
+        "price": 1400,
+        "inventory": 12,
+        "color": "Beige",
+        "style": "Plaid shirt",
+        "material": "Cotton",
+        "category": "shirts",
+        "gender": "men",
+        "type": "instore",
+        "created_at": "2024-05-17T10:31:12.110Z",
+        "updated_at": "2024-05-17T10:31:12.110Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "4656c820-d720-4e4a-9327-c7b8cf9dc742",
+      "fields": {
+        "name": "TOP AND SHORTS SET",
+        "description": "Two piece set. Rib top with round neck and straps. Elastic waistband shorts with front drawstring. Front pockets.",
+        "price": 3199,
+        "inventory": 12,
+        "color": "Blue",
+        "style": "Cord set",
+        "material": "cotton, elastane",
+        "category": "others",
+        "gender": "kids",
+        "type": "instore",
+        "created_at": "2024-05-17T11:45:06.739Z",
+        "updated_at": "2024-05-17T11:45:06.739Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "51bb9617-c95b-4401-bb27-9d04acb39a5c",
+      "fields": {
+        "name": "BOXY FIT HOODED SWEATSHIRT",
+        "description": "Boxy fit hoodie sweatshirt. Hooded collar and long sleeves. Front pouch pocket. Washed effect. Rib trim.",
+        "price": 4200,
+        "inventory": 14,
+        "color": "Black",
+        "style": "hoodie",
+        "material": "cotton, polyster",
+        "category": "others",
+        "gender": "men",
+        "type": "instore",
+        "created_at": "2024-05-17T07:45:23.120Z",
+        "updated_at": "2024-05-17T07:45:23.120Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "597a4324-c507-4c27-8077-2b76e03f677d",
+      "fields": {
+        "name": "TEXTURED STRIPED PANTS",
+        "description": "Pants with adjustable elastic drawstring waistband. Front patch pockets. Striped print.",
+        "price": 1650,
+        "inventory": 4,
+        "color": "REDDISH",
+        "style": "Striped",
+        "material": "cotton",
+        "category": "pants",
+        "gender": "kids",
+        "type": "instore",
+        "created_at": "2024-05-17T11:32:28.180Z",
+        "updated_at": "2024-05-17T11:32:28.180Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "6bfa7037-e3a3-4622-bc0a-9afca8d7cc01",
+      "fields": {
+        "name": "LINEN SUIT PANTS",
+        "description": "Linen pants with adjustable interior waistband and hidden zip closure, and belt loops. Front pockets and back welt pocket with button closure. Pleat detail at front.",
+        "price": 1950,
+        "inventory": 6,
+        "color": "ECRU",
+        "style": "linen pants",
+        "material": "linen",
+        "category": "pants",
+        "gender": "kids",
+        "type": "instore",
+        "created_at": "2024-05-17T11:39:42.154Z",
+        "updated_at": "2024-05-17T11:39:42.154Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "77f45867-e6cd-4269-8f7c-df8b3a322864",
+      "fields": {
+        "name": "EMBROIDERED COLOR BLOCK SWEATSHIRT",
+        "description": "Round neck sweatshirt with long sleeves. Embroidered motif at chest. Rib trim.",
+        "price": 3200,
+        "inventory": 6,
+        "color": "Yellow",
+        "style": "Embroidery",
+        "material": "cotton",
+        "category": "others",
+        "gender": "kids",
+        "type": "instore",
+        "created_at": "2024-05-17T11:28:06.246Z",
+        "updated_at": "2024-05-17T11:28:06.246Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "7e6411ea-37b7-4c7f-87d7-15d062a4a2fb",
+      "fields": {
+        "name": "MID WAIST BAGGY BALLOON JEANS",
+        "description": "Jeans with a mid waist and five pockets. Twisted seams. Front zip and metal button closure.",
+        "price": 3300,
+        "inventory": 4,
+        "color": "Light Blue",
+        "style": "Baggy balloon jeans",
+        "material": "cotton",
+        "category": "pants",
+        "gender": "women",
+        "type": "instore",
+        "created_at": "2024-05-17T11:05:21.687Z",
+        "updated_at": "2024-05-17T11:05:21.687Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "7f3a75e2-9cc8-4916-bbde-14b6b9f5111b",
+      "fields": {
+        "name": "WASHED TEXTURED JACKET",
+        "description": "Relaxed fit jacket made of cotton canvas fabric. Adjustable hooded collar. Long sleeves. Elasticized trim. Washed effect. Front zip closure.",
+        "price": 4250,
+        "inventory": 11,
+        "color": "Blue",
+        "style": "Washed Jacket",
+        "material": "cotton",
+        "category": "jackets",
+        "gender": "men",
+        "type": "instore",
+        "created_at": "2024-05-17T08:31:16.686Z",
+        "updated_at": "2024-05-17T08:31:16.686Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "80c941e4-d557-40ae-96b4-4ca0799246ca",
+      "fields": {
+        "name": "PRINTED WASHED EFFECT T-SHIRT",
+        "description": "T-shirt made of washed effect cotton. Round neck and short sleeves. Contrasting front print.",
+        "price": 1300,
+        "inventory": 12,
+        "color": "GREY",
+        "style": "Washed Tshirt",
+        "material": "cotton",
+        "category": "tshirts",
+        "gender": "women",
+        "type": "instore",
+        "created_at": "2024-05-17T10:53:31.176Z",
+        "updated_at": "2024-05-17T10:53:31.176Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "86c2c317-f92b-4e60-af4e-b2836cce278d",
+      "fields": {
+        "name": "OPENWORK EMBROIDERED PANTS",
+        "description": "Relaxed fit pants made of cotton and linen blend fabric. Adjustable elastic drawstring waistband. Side pockets. Contrasting embroidery at leg.",
+        "price": 3200,
+        "inventory": 11,
+        "color": "White",
+        "style": "Embroidery",
+        "material": "cotton, linen, EMBROIDERY, polyester",
+        "category": "pants",
+        "gender": "men",
+        "type": "instore",
+        "created_at": "2024-05-17T07:29:09.925Z",
+        "updated_at": "2024-05-17T07:29:09.925Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "8a72fbe9-628b-4e28-8593-b61ac0390c67",
+      "fields": {
+        "name": "DENIM STRAIGHT CUT PANTS",
+        "description": "These jeans are part of the True Neutrals collection. Made of 100% cotton denim twill with selvedge finish, a special quality found on the interior of the garment, these are straight cut jeans with five pocket styling.",
+        "price": 1750,
+        "inventory": 7,
+        "color": "Indigo",
+        "style": "Straight pant",
+        "material": "cotton",
+        "category": "pants",
+        "gender": "kids",
+        "type": "instore",
+        "created_at": "2024-05-17T11:41:30.335Z",
+        "updated_at": "2024-05-17T11:41:30.335Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "a4cbc102-5010-4870-a9a1-bdca99136bb9",
+      "fields": {
+        "name": "WRINKLE LOOK DOUBLE BREASTED BLAZER",
+        "description": "Lapel collar blazer with turned-up long sleeves. Wrinkled look fabric. Front double breasted buttoned closure.",
+        "price": 4250,
+        "inventory": 16,
+        "color": "Black",
+        "style": "Double Breasted blazer",
+        "material": "polyester",
+        "category": "blazers",
+        "gender": "women",
+        "type": "instore",
+        "created_at": "2024-05-17T10:40:27.062Z",
+        "updated_at": "2024-05-17T10:40:27.062Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "aa0aadc8-1912-415f-a727-9066ec35f5ee",
+      "fields": {
+        "name": "STRIPED JACQUARD SHIRT",
+        "description": "Relaxed fit shirt made of viscose blend fabric. Lapel collar and long sleeves with buttoned cuffs. Front button closure.",
+        "price": 1750,
+        "inventory": 8,
+        "color": "KHAKI",
+        "style": "Striped",
+        "material": "viscose, polyester",
+        "category": "shirts",
+        "gender": "men",
+        "type": "instore",
+        "created_at": "2024-05-17T07:25:17.371Z",
+        "updated_at": "2024-05-17T07:25:17.371Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "b6f135de-43e6-4d16-a000-599daa190938",
+      "fields": {
+        "name": "PRINTED DRESS ZW COLLECTION",
+        "description": "Midi dress made of 100% viscose. Lapel collar and below-the-elbow length sleeves. Self-belt with metal buckle. Front button closure.",
+        "price": 1900,
+        "inventory": 7,
+        "color": "Red",
+        "style": "Midi Dress",
+        "material": "viscose",
+        "category": "dresses",
+        "gender": "women",
+        "type": "instore",
+        "created_at": "2024-05-17T10:55:51.131Z",
+        "updated_at": "2024-05-17T10:55:51.131Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "ba26268e-a4d9-4ce7-8f64-77f7e56a2d7c",
+      "fields": {
+        "name": "LOW RISE JEANS",
+        "description": "Low rise jeans with five pockets. Super wide leg long length. Washed effect. Front zip and metal button closure.",
+        "price": 2150,
+        "inventory": 10,
+        "color": "Blue",
+        "style": "Elephant leg pant",
+        "material": "cotton, lyocell",
+        "category": "pants",
+        "gender": "women",
+        "type": "instore",
+        "created_at": "2024-05-17T11:03:53.748Z",
+        "updated_at": "2024-05-17T11:03:53.748Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "c5b766e6-6978-48af-84a9-8eef35a37dc0",
+      "fields": {
+        "name": "TIED WRAP SHIRT",
+        "description": "Shirt made of cotton blend fabric. Lapel collar and V-neck wrap front with draped three-quarter length sleeves. Front wrap closure with self tie.",
+        "price": 1750,
+        "inventory": 4,
+        "color": "BEIGE",
+        "style": "Wrap Shirt",
+        "material": "cotton, polyester",
+        "category": "shirts",
+        "gender": "women",
+        "type": "instore",
+        "created_at": "2024-05-17T10:48:08.065Z",
+        "updated_at": "2024-05-17T10:48:08.065Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "c7e46c82-3ab7-414a-936e-986d17b23f93",
+      "fields": {
+        "name": "WASHED CARGO SHORTS",
+        "description": "Relaxed fit shorts. Front flap pockets and back patch pockets. Flap patch pockets at legs. Washed with all over spray effect print. Front zip and button closure.",
+        "price": 2500,
+        "inventory": 8,
+        "color": "Sand",
+        "style": "Cargo Shorts",
+        "material": "Cotton",
+        "category": "others",
+        "gender": "men",
+        "type": "instore",
+        "created_at": "2024-05-17T10:22:07.211Z",
+        "updated_at": "2024-05-17T10:22:07.211Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "ca8dd496-4c48-4cb1-8cda-51c08510b52c",
+      "fields": {
+        "name": "DENIM TRF JUMPSUIT",
+        "description": "Long sleeve lapel collar jumpsuit. Front and back patch pockets. Washed effect. Front zip and metal button closure.",
+        "price": 3600,
+        "inventory": 8,
+        "color": "Blue",
+        "style": "Jumpsuit",
+        "material": "cotton, lyocell",
+        "category": "others",
+        "gender": "women",
+        "type": "instore",
+        "created_at": "2024-05-17T11:02:02.921Z",
+        "updated_at": "2024-05-17T11:02:02.921Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "ce83c479-d3ed-49e7-98a3-9d04c9815b2f",
+      "fields": {
+        "name": "SHIRT DRESS WITH POCKETS",
+        "description": "This dress is part of the True Neutrals collection. Made of 100% cotton. Shirt style collar with opening and tonal buttons.",
+        "price": 1990,
+        "inventory": 5,
+        "color": "GREEN",
+        "style": "Pocket dress",
+        "material": "cotton",
+        "category": "dresses",
+        "gender": "kids",
+        "type": "instore",
+        "created_at": "2024-05-17T11:24:37.620Z",
+        "updated_at": "2024-05-17T11:24:37.620Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "ce9936e9-d23c-4ee2-8736-63b539dc0a6e",
+      "fields": {
+        "name": "VISCOSE - LINEN SUIT JACKET",
+        "description": "Relaxed fit blazer made of viscose and linen blend fabric. Notched lapel collar and long sleeves with buttoned cuffs. Flap pockets at hip and interior pocket.",
+        "price": 3200,
+        "inventory": 11,
+        "color": "Sky Blue",
+        "style": "Suit",
+        "material": "viscose, linen",
+        "category": "blazers",
+        "gender": "men",
+        "type": "instore",
+        "created_at": "2024-05-17T07:06:02.027Z",
+        "updated_at": "2024-05-17T07:06:02.027Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "d08f4efe-c16d-4743-b484-de7758b1c861",
+      "fields": {
+        "name": "EMBROIDERED TERRYCLOTH POLO",
+        "description": "Long sleeve polo shirt. Opening at chest. Embroidered motif at chest. Rib trim.",
+        "price": 3200,
+        "inventory": 9,
+        "color": "Blue",
+        "style": "Polo",
+        "material": "cotton, polyester",
+        "category": "others",
+        "gender": "kids",
+        "type": "instore",
+        "created_at": "2024-05-17T11:30:48.312Z",
+        "updated_at": "2024-05-17T11:30:48.312Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "d3c93eb7-6df8-437a-b503-fd0632f78cdc",
+      "fields": {
+        "name": "HEMP DENIM JACKET",
+        "description": "Cropped jacket made of cotton and hemp blend denim. Lapel collar and long sleeves. Patch pockets with flaps at hip. Elasticized trim. Front zipper closure hidden by a flap.",
+        "price": 5200,
+        "inventory": 12,
+        "color": "LIGHT BEIGE",
+        "style": "Denim jacket",
+        "material": "Cotton, Hemp",
+        "category": "jackets",
+        "gender": "men",
+        "type": "instore",
+        "created_at": "2024-05-17T08:32:53.045Z",
+        "updated_at": "2024-05-17T08:32:53.045Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "e7b073a2-bef1-49a7-8435-ff5d481c6437",
+      "fields": {
+        "name": "WASHED CARGO PRINT SHORT",
+        "description": "Relaxed fit shorts. Adjustable elastic waistband with drawstring. Front flap pockets and back welt pockets. Flap patch pockets at legs. Washed effect. Adjustable drawstring hem. Front zip and button closure.",
+        "price": 1750,
+        "inventory": 15,
+        "color": "Gray",
+        "style": "Washed shorts",
+        "material": "Cotton",
+        "category": "others",
+        "gender": "men",
+        "type": "instore",
+        "created_at": "2024-05-17T10:33:03.333Z",
+        "updated_at": "2024-05-17T10:33:03.333Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "ea97faa7-abd2-422f-abcf-b03734fad6ca",
+      "fields": {
+        "name": "GIRL PRINT T-SHIRT",
+        "description": "Short sleeve round neck T-shirt. Contrast girls print.",
+        "price": 1550,
+        "inventory": 15,
+        "color": "Blue",
+        "style": "Printed",
+        "material": "Cotton",
+        "category": "tshirts",
+        "gender": "women",
+        "type": "instore",
+        "created_at": "2024-05-17T10:54:41.267Z",
+        "updated_at": "2024-05-17T10:54:41.267Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "f783ae8a-f626-4e3a-8578-8756a507b1c8",
+      "fields": {
+        "name": "PRINTED WASHED T-SHIRT",
+        "description": "Boxy fit T-shirt made of dense cotton. Round neck and short sleeves. Contrasting front print. Washed effect.",
+        "price": 1120,
+        "inventory": 7,
+        "color": "Gray",
+        "style": "Washed tshirt",
+        "material": "Cotton",
+        "category": "tshirts",
+        "gender": "men",
+        "type": "instore",
+        "created_at": "2024-05-17T10:34:41.594Z",
+        "updated_at": "2024-05-17T10:34:41.594Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "f79da496-22d3-4947-9ad3-97f265d19de0",
+      "fields": {
+        "name": "BASIC HEAVYWEIGHT T-SHIRT",
+        "description": "Roomy T-shirt made of dense cotton. Round neck and short sleeves.",
+        "price": 950,
+        "inventory": 9,
+        "color": "Purple",
+        "style": "Basic tshirt",
+        "material": "Cotton",
+        "category": "tshirts",
+        "gender": "men",
+        "type": "instore",
+        "created_at": "2024-05-17T07:20:15.897Z",
+        "updated_at": "2024-05-17T07:20:15.897Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "f80fc308-2b66-41ed-9291-3c85d4e935c8",
+      "fields": {
+        "name": "LINEN PANTS WITH BELT",
+        "description": "Relaxed fit pants made of linen fabric. Self-belt at waist and front pleats. Side pockets and back welt pockets. Front zip and button closure.",
+        "price": 2999,
+        "inventory": 11,
+        "color": "Taupe Brown",
+        "style": "Linen pants",
+        "material": "linen",
+        "category": "pants",
+        "gender": "men",
+        "type": "instore",
+        "created_at": "2024-05-17T07:31:46.498Z",
+        "updated_at": "2024-05-17T07:31:46.498Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "fc4b8734-6b5e-4518-ac59-19c63d892e89",
+      "fields": {
+        "name": "BAGGY FIT JORTS",
+        "description": "Baggy fit jorts. Five pockets. Washed effect. Front zip and button closure.",
+        "price": 1750,
+        "inventory": 15,
+        "color": "Light gray",
+        "style": "Baggy fit",
+        "material": "cotton",
+        "category": "others",
+        "gender": "men",
+        "type": "instore",
+        "created_at": "2024-05-17T10:29:21.305Z",
+        "updated_at": "2024-05-17T10:29:21.305Z"
+      }
+    },
+    {
+      "model": "product.product",
+      "pk": "fddf8e98-5acd-4784-bff1-5f5795f679b7",
+      "fields": {
+        "name": "DIP DYE OPEN KNIT SWEATER",
+        "description": "Openwork knit sweater with round neck and long sleeves. Dip dye print.",
+        "price": 2700,
+        "inventory": 8,
+        "color": "Pink",
+        "style": "Tie Dye",
+        "material": "wool",
+        "category": "sweaters",
+        "gender": "kids",
+        "type": "instore",
+        "created_at": "2024-05-17T11:43:10.707Z",
+        "updated_at": "2024-05-17T11:43:10.707Z"
+      }
+    }
+  ]

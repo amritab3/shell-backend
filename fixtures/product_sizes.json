@@ -1,0 +1,1047 @@
+[
+    {
+      "model": "product.productsize",
+      "pk": "03cef293-f1cc-4552-b03e-06fe7ce7d8ef",
+      "fields": {
+        "size": "s",
+        "size_inventory": 4,
+        "product": "7f3a75e2-9cc8-4916-bbde-14b6b9f5111b",
+        "created_at": "2024-05-17T08:31:16.730Z",
+        "updated_at": "2024-05-17T08:31:16.730Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "05ba2257-052a-43f1-9f8a-431115d12230",
+      "fields": {
+        "size": "s",
+        "size_inventory": 3,
+        "product": "f80fc308-2b66-41ed-9291-3c85d4e935c8",
+        "created_at": "2024-05-17T07:31:46.642Z",
+        "updated_at": "2024-05-17T07:31:46.642Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "0832157c-f4b1-4cbc-86e2-84f74a03e557",
+      "fields": {
+        "size": "l",
+        "size_inventory": 6,
+        "product": "aa0aadc8-1912-415f-a727-9066ec35f5ee",
+        "created_at": "2024-05-17T07:25:17.397Z",
+        "updated_at": "2024-05-17T07:25:17.397Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "1305d2ec-1270-48c9-88e0-faea90545e0e",
+      "fields": {
+        "size": "xs",
+        "size_inventory": 2,
+        "product": "12d4b03b-2b13-487f-9578-0e47b51c9501",
+        "created_at": "2024-05-17T11:17:08.677Z",
+        "updated_at": "2024-05-17T11:17:08.677Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "17ed2309-d512-4237-b108-7a85103cdcb4",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 2,
+        "product": "aa0aadc8-1912-415f-a727-9066ec35f5ee",
+        "created_at": "2024-05-17T07:25:17.405Z",
+        "updated_at": "2024-05-17T07:25:17.405Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "1ff7d3e0-5e0b-4712-8e66-7bdf53049229",
+      "fields": {
+        "size": "s",
+        "size_inventory": 4,
+        "product": "4656c820-d720-4e4a-9327-c7b8cf9dc742",
+        "created_at": "2024-05-17T11:45:06.775Z",
+        "updated_at": "2024-05-17T11:45:06.775Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "205f6083-2aa6-41ab-b655-8258b28a4e4d",
+      "fields": {
+        "size": "l",
+        "size_inventory": 3,
+        "product": "ce83c479-d3ed-49e7-98a3-9d04c9815b2f",
+        "created_at": "2024-05-17T11:24:37.782Z",
+        "updated_at": "2024-05-17T11:24:37.782Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "22600882-d5f4-41fd-8ddf-5870e3195ea0",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 6,
+        "product": "f80fc308-2b66-41ed-9291-3c85d4e935c8",
+        "created_at": "2024-05-17T07:31:46.669Z",
+        "updated_at": "2024-05-17T07:31:46.669Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "255289cb-fdc8-4e09-8d2e-25ea0bed4952",
+      "fields": {
+        "size": "m",
+        "size_inventory": 3,
+        "product": "45c897d3-722c-430c-9356-57bf2e58e1b7",
+        "created_at": "2024-05-17T10:31:12.139Z",
+        "updated_at": "2024-05-17T10:31:12.139Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "27401351-b20f-4803-aba1-ff737d12056c",
+      "fields": {
+        "size": "s",
+        "size_inventory": 7,
+        "product": "fc4b8734-6b5e-4518-ac59-19c63d892e89",
+        "created_at": "2024-05-17T10:29:21.358Z",
+        "updated_at": "2024-05-17T10:29:21.358Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "2816503d-3eb9-4d20-a14c-8bc26a026b42",
+      "fields": {
+        "size": "xxl",
+        "size_inventory": 2,
+        "product": "86c2c317-f92b-4e60-af4e-b2836cce278d",
+        "created_at": "2024-05-17T07:29:09.960Z",
+        "updated_at": "2024-05-17T07:29:09.960Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "285d39a7-6375-42ed-9ff0-2646eadd9637",
+      "fields": {
+        "size": "m",
+        "size_inventory": 5,
+        "product": "c7e46c82-3ab7-414a-936e-986d17b23f93",
+        "created_at": "2024-05-17T10:22:07.396Z",
+        "updated_at": "2024-05-17T10:22:07.396Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "2f934781-0c81-4ed4-a41d-b2706fc68353",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 2,
+        "product": "7f3a75e2-9cc8-4916-bbde-14b6b9f5111b",
+        "created_at": "2024-05-17T08:31:16.769Z",
+        "updated_at": "2024-05-17T08:31:16.769Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "329f2647-90d0-422a-aa78-8d1db46a57aa",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 2,
+        "product": "34f0e10c-3094-41d7-acfc-91584f3c8f54",
+        "created_at": "2024-05-17T10:42:21.888Z",
+        "updated_at": "2024-05-17T10:42:21.888Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "351a946d-6434-4693-86b8-1f324c438d9f",
+      "fields": {
+        "size": "xs",
+        "size_inventory": 2,
+        "product": "77f45867-e6cd-4269-8f7c-df8b3a322864",
+        "created_at": "2024-05-17T11:28:06.262Z",
+        "updated_at": "2024-05-17T11:28:06.262Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "3a914d43-d6c8-40ed-92c1-6762ae5d886f",
+      "fields": {
+        "size": "xs",
+        "size_inventory": 5,
+        "product": "ce9936e9-d23c-4ee2-8736-63b539dc0a6e",
+        "created_at": "2024-05-17T07:06:02.334Z",
+        "updated_at": "2024-05-17T07:06:02.334Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "3b2e988b-87aa-47df-9af6-916a8b1995ac",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 2,
+        "product": "425782dc-1afc-4c93-abcc-d6ee2dde8932",
+        "created_at": "2024-05-17T11:29:30.139Z",
+        "updated_at": "2024-05-17T11:29:30.139Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "4269bf66-3d4a-4cbe-83ef-16a9b10da9fc",
+      "fields": {
+        "size": "m",
+        "size_inventory": 5,
+        "product": "7f3a75e2-9cc8-4916-bbde-14b6b9f5111b",
+        "created_at": "2024-05-17T08:31:16.764Z",
+        "updated_at": "2024-05-17T08:31:16.764Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "42e77a37-a22d-4253-9f7b-1c29011025a9",
+      "fields": {
+        "size": "l",
+        "size_inventory": 4,
+        "product": "77f45867-e6cd-4269-8f7c-df8b3a322864",
+        "created_at": "2024-05-17T11:28:06.272Z",
+        "updated_at": "2024-05-17T11:28:06.272Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "42e98e5a-bf05-40de-96cd-9e8f1279a362",
+      "fields": {
+        "size": "xxl",
+        "size_inventory": 1,
+        "product": "32bcbd05-ca27-4c6e-8451-d2cd21d3c500",
+        "created_at": "2024-05-17T10:56:59.975Z",
+        "updated_at": "2024-05-17T10:56:59.975Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "4a6b4061-dcf4-41ee-a381-14071e51753d",
+      "fields": {
+        "size": "l",
+        "size_inventory": 5,
+        "product": "fddf8e98-5acd-4784-bff1-5f5795f679b7",
+        "created_at": "2024-05-17T11:43:10.739Z",
+        "updated_at": "2024-05-17T11:43:10.739Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "4ac16b0d-b914-4993-8ea2-f44a961cb1ff",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 3,
+        "product": "b6f135de-43e6-4d16-a000-599daa190938",
+        "created_at": "2024-05-17T10:55:51.160Z",
+        "updated_at": "2024-05-17T10:55:51.160Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "4ac461e2-ac41-4483-99c7-403b0d72f5bf",
+      "fields": {
+        "size": "m",
+        "size_inventory": 7,
+        "product": "f79da496-22d3-4947-9ad3-97f265d19de0",
+        "created_at": "2024-05-17T07:20:15.907Z",
+        "updated_at": "2024-05-17T07:20:15.907Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "4bf609b8-fd49-440e-9a81-8d13c39731e9",
+      "fields": {
+        "size": "xs",
+        "size_inventory": 3,
+        "product": "425782dc-1afc-4c93-abcc-d6ee2dde8932",
+        "created_at": "2024-05-17T11:29:30.126Z",
+        "updated_at": "2024-05-17T11:29:30.126Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "55c79319-f815-4462-b0fd-59549fd2eadc",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 3,
+        "product": "fc4b8734-6b5e-4518-ac59-19c63d892e89",
+        "created_at": "2024-05-17T10:29:21.362Z",
+        "updated_at": "2024-05-17T10:29:21.362Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "574b03c5-dcec-4b8d-9a82-90ee39238a20",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 7,
+        "product": "ea97faa7-abd2-422f-abcf-b03734fad6ca",
+        "created_at": "2024-05-17T10:54:41.298Z",
+        "updated_at": "2024-05-17T10:54:41.298Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "5865929b-ba5b-493f-8173-31d93fbc2e3e",
+      "fields": {
+        "size": "m",
+        "size_inventory": 4,
+        "product": "80c941e4-d557-40ae-96b4-4ca0799246ca",
+        "created_at": "2024-05-17T10:53:31.190Z",
+        "updated_at": "2024-05-17T10:53:31.190Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "5b54eaf9-dab5-4fec-b811-43fe5fe07171",
+      "fields": {
+        "size": "l",
+        "size_inventory": 7,
+        "product": "a4cbc102-5010-4870-a9a1-bdca99136bb9",
+        "created_at": "2024-05-17T10:40:27.257Z",
+        "updated_at": "2024-05-17T10:40:27.257Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "60b219ff-5af5-4f06-a375-cd50a457ef53",
+      "fields": {
+        "size": "l",
+        "size_inventory": 2,
+        "product": "066d477c-ea4b-488b-bee2-fe24a21a3ac1",
+        "created_at": "2024-05-17T10:52:07.335Z",
+        "updated_at": "2024-05-17T10:52:07.335Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "62053c78-dedb-4984-92fd-1583c6fed074",
+      "fields": {
+        "size": "xxl",
+        "size_inventory": 7,
+        "product": "e7b073a2-bef1-49a7-8435-ff5d481c6437",
+        "created_at": "2024-05-17T10:33:03.362Z",
+        "updated_at": "2024-05-17T10:33:03.362Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "62ce543c-7b5c-482e-b038-1de33ad0b0e4",
+      "fields": {
+        "size": "m",
+        "size_inventory": 2,
+        "product": "f80fc308-2b66-41ed-9291-3c85d4e935c8",
+        "created_at": "2024-05-17T07:31:46.653Z",
+        "updated_at": "2024-05-17T07:31:46.653Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "6513fc51-a751-4b89-b4f9-6f90173c1ace",
+      "fields": {
+        "size": "l",
+        "size_inventory": 4,
+        "product": "7e6411ea-37b7-4c7f-87d7-15d062a4a2fb",
+        "created_at": "2024-05-17T11:05:21.710Z",
+        "updated_at": "2024-05-17T11:05:21.710Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "66986f9f-23dc-4dae-be84-0eca84b7e3ba",
+      "fields": {
+        "size": "m",
+        "size_inventory": 2,
+        "product": "6bfa7037-e3a3-4622-bc0a-9afca8d7cc01",
+        "created_at": "2024-05-17T11:39:42.184Z",
+        "updated_at": "2024-05-17T11:39:42.184Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "66d38d1c-404d-460f-a2f7-bded63f10e01",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 4,
+        "product": "80c941e4-d557-40ae-96b4-4ca0799246ca",
+        "created_at": "2024-05-17T10:53:31.220Z",
+        "updated_at": "2024-05-17T10:53:31.220Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "6900704a-be17-4c1a-be57-811da773b6cb",
+      "fields": {
+        "size": "l",
+        "size_inventory": 4,
+        "product": "ce9936e9-d23c-4ee2-8736-63b539dc0a6e",
+        "created_at": "2024-05-17T07:06:02.856Z",
+        "updated_at": "2024-05-17T07:06:02.856Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "6942c61e-e6f3-4c28-bcb3-09446c8925f8",
+      "fields": {
+        "size": "l",
+        "size_inventory": 3,
+        "product": "45c897d3-722c-430c-9356-57bf2e58e1b7",
+        "created_at": "2024-05-17T10:31:12.143Z",
+        "updated_at": "2024-05-17T10:31:12.143Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "6b20779b-de78-420a-93e6-8be0fa11262a",
+      "fields": {
+        "size": "m",
+        "size_inventory": 3,
+        "product": "430fbf0d-95b2-48c8-be04-e8b46e962ba8",
+        "created_at": "2024-05-17T10:49:47.332Z",
+        "updated_at": "2024-05-17T10:49:47.332Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "707c6948-67be-4f4e-83bf-3cb316e3e25a",
+      "fields": {
+        "size": "xs",
+        "size_inventory": 3,
+        "product": "fddf8e98-5acd-4784-bff1-5f5795f679b7",
+        "created_at": "2024-05-17T11:43:10.732Z",
+        "updated_at": "2024-05-17T11:43:10.732Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "7836503e-dbeb-4062-8fa2-9b2600aaeeb8",
+      "fields": {
+        "size": "m",
+        "size_inventory": 3,
+        "product": "597a4324-c507-4c27-8077-2b76e03f677d",
+        "created_at": "2024-05-17T11:32:28.194Z",
+        "updated_at": "2024-05-17T11:32:28.194Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "7e1293ba-1305-430d-9fe3-b9de42a296e0",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 2,
+        "product": "c5b766e6-6978-48af-84a9-8eef35a37dc0",
+        "created_at": "2024-05-17T10:48:08.115Z",
+        "updated_at": "2024-05-17T10:48:08.115Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "7f7d1439-af83-4eee-a787-e726b3566c88",
+      "fields": {
+        "size": "m",
+        "size_inventory": 1,
+        "product": "3dad2c1e-e5a1-431f-b3f5-e67ae67b3749",
+        "created_at": "2024-05-17T07:23:31.822Z",
+        "updated_at": "2024-05-17T07:23:31.822Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "814d01f6-fb8a-4ffd-973a-bb196dccabe8",
+      "fields": {
+        "size": "m",
+        "size_inventory": 6,
+        "product": "a4cbc102-5010-4870-a9a1-bdca99136bb9",
+        "created_at": "2024-05-17T10:40:27.241Z",
+        "updated_at": "2024-05-17T10:40:27.241Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "8192c1de-853d-4b64-b53f-bce791f58c1b",
+      "fields": {
+        "size": "xs",
+        "size_inventory": 3,
+        "product": "8a72fbe9-628b-4e28-8593-b61ac0390c67",
+        "created_at": "2024-05-17T11:41:30.372Z",
+        "updated_at": "2024-05-17T11:41:30.372Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "8613b5c8-ce56-4ca5-8c34-5eb23b381677",
+      "fields": {
+        "size": "m",
+        "size_inventory": 3,
+        "product": "e7b073a2-bef1-49a7-8435-ff5d481c6437",
+        "created_at": "2024-05-17T10:33:03.349Z",
+        "updated_at": "2024-05-17T10:33:03.349Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "86342b7d-db1d-4cb2-9000-98d0b75e5030",
+      "fields": {
+        "size": "xs",
+        "size_inventory": 4,
+        "product": "32309172-60be-4c0d-a13d-b9221763dfb4",
+        "created_at": "2024-05-17T11:46:35.757Z",
+        "updated_at": "2024-05-17T11:46:35.757Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "8b4dac48-c444-4221-96fb-5b6de3d6b14c",
+      "fields": {
+        "size": "xxl",
+        "size_inventory": 4,
+        "product": "066d477c-ea4b-488b-bee2-fe24a21a3ac1",
+        "created_at": "2024-05-17T10:52:07.345Z",
+        "updated_at": "2024-05-17T10:52:07.345Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "8d088363-7e59-458f-a24b-f76b79db22fc",
+      "fields": {
+        "size": "m",
+        "size_inventory": 4,
+        "product": "425782dc-1afc-4c93-abcc-d6ee2dde8932",
+        "created_at": "2024-05-17T11:29:30.134Z",
+        "updated_at": "2024-05-17T11:29:30.134Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "8ebbb291-3e7a-4673-8102-e20c2e4ac7f3",
+      "fields": {
+        "size": "xs",
+        "size_inventory": 3,
+        "product": "b6f135de-43e6-4d16-a000-599daa190938",
+        "created_at": "2024-05-17T10:55:51.153Z",
+        "updated_at": "2024-05-17T10:55:51.153Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "8f3e3e3b-8ae4-41c8-aa63-bd185dd54318",
+      "fields": {
+        "size": "m",
+        "size_inventory": 5,
+        "product": "fc4b8734-6b5e-4518-ac59-19c63d892e89",
+        "created_at": "2024-05-17T10:29:21.341Z",
+        "updated_at": "2024-05-17T10:29:21.341Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "955ed1a7-5dc8-4bef-ad99-6c5909c0a18a",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 4,
+        "product": "13e6fcee-7c61-4404-a6f9-313177a57936",
+        "created_at": "2024-05-17T11:18:25.632Z",
+        "updated_at": "2024-05-17T11:18:25.632Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "955febbb-b291-408b-864e-aedb8edd0148",
+      "fields": {
+        "size": "m",
+        "size_inventory": 2,
+        "product": "51bb9617-c95b-4401-bb27-9d04acb39a5c",
+        "created_at": "2024-05-17T07:45:23.162Z",
+        "updated_at": "2024-05-17T07:45:23.162Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "99a2a218-d85d-40b8-85f5-2cdae4d42d62",
+      "fields": {
+        "size": "m",
+        "size_inventory": 5,
+        "product": "f783ae8a-f626-4e3a-8578-8756a507b1c8",
+        "created_at": "2024-05-17T10:34:41.613Z",
+        "updated_at": "2024-05-17T10:34:41.613Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "9ff2c79d-374b-4d00-ae42-6545cdc1fe48",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 5,
+        "product": "d08f4efe-c16d-4743-b484-de7758b1c861",
+        "created_at": "2024-05-17T11:30:48.335Z",
+        "updated_at": "2024-05-17T11:30:48.335Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "a37dfbaf-9e6a-44f5-ae4e-8c0237396a98",
+      "fields": {
+        "size": "m",
+        "size_inventory": 4,
+        "product": "8a72fbe9-628b-4e28-8593-b61ac0390c67",
+        "created_at": "2024-05-17T11:41:30.380Z",
+        "updated_at": "2024-05-17T11:41:30.380Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "a4086f50-282d-4c45-b3ed-9a07d1c99917",
+      "fields": {
+        "size": "xs",
+        "size_inventory": 3,
+        "product": "45c897d3-722c-430c-9356-57bf2e58e1b7",
+        "created_at": "2024-05-17T10:31:12.126Z",
+        "updated_at": "2024-05-17T10:31:12.126Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "a5b7db88-417c-47bc-b128-7ab94c2ec71c",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 7,
+        "product": "430fbf0d-95b2-48c8-be04-e8b46e962ba8",
+        "created_at": "2024-05-17T10:49:47.340Z",
+        "updated_at": "2024-05-17T10:49:47.340Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "a86ceb53-6d24-4600-b083-2ede914d253c",
+      "fields": {
+        "size": "s",
+        "size_inventory": 2,
+        "product": "c7e46c82-3ab7-414a-936e-986d17b23f93",
+        "created_at": "2024-05-17T10:22:07.289Z",
+        "updated_at": "2024-05-17T10:22:07.289Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "a91b814f-26c7-434c-91e5-6c2134d15381",
+      "fields": {
+        "size": "m",
+        "size_inventory": 2,
+        "product": "c5b766e6-6978-48af-84a9-8eef35a37dc0",
+        "created_at": "2024-05-17T10:48:08.105Z",
+        "updated_at": "2024-05-17T10:48:08.105Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "aa7315d4-f320-418e-981c-c48a40c02013",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 6,
+        "product": "51bb9617-c95b-4401-bb27-9d04acb39a5c",
+        "created_at": "2024-05-17T07:45:23.187Z",
+        "updated_at": "2024-05-17T07:45:23.187Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "ab8da4d4-ada3-4404-afc8-eaf417a09709",
+      "fields": {
+        "size": "m",
+        "size_inventory": 2,
+        "product": "ce9936e9-d23c-4ee2-8736-63b539dc0a6e",
+        "created_at": "2024-05-17T07:06:02.837Z",
+        "updated_at": "2024-05-17T07:06:02.837Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "ac283c80-bce4-4fb4-b21b-4ffb3ea67f3d",
+      "fields": {
+        "size": "m",
+        "size_inventory": 8,
+        "product": "4656c820-d720-4e4a-9327-c7b8cf9dc742",
+        "created_at": "2024-05-17T11:45:06.784Z",
+        "updated_at": "2024-05-17T11:45:06.784Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "acdd069e-388b-44cd-bee9-492823be1dc1",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 2,
+        "product": "ca8dd496-4c48-4cb1-8cda-51c08510b52c",
+        "created_at": "2024-05-17T11:02:02.970Z",
+        "updated_at": "2024-05-17T11:02:02.970Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "afb9e439-1abe-450a-8fc8-2e04f340e31e",
+      "fields": {
+        "size": "m",
+        "size_inventory": 2,
+        "product": "86c2c317-f92b-4e60-af4e-b2836cce278d",
+        "created_at": "2024-05-17T07:29:09.948Z",
+        "updated_at": "2024-05-17T07:29:09.948Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "b0881141-d333-4fe8-a7fd-243f9f2c9794",
+      "fields": {
+        "size": "xxl",
+        "size_inventory": 1,
+        "product": "b6f135de-43e6-4d16-a000-599daa190938",
+        "created_at": "2024-05-17T10:55:51.165Z",
+        "updated_at": "2024-05-17T10:55:51.165Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "b53550e6-2ca4-49d2-bb3e-63badcaff3fb",
+      "fields": {
+        "size": "m",
+        "size_inventory": 4,
+        "product": "12d4b03b-2b13-487f-9578-0e47b51c9501",
+        "created_at": "2024-05-17T11:17:08.702Z",
+        "updated_at": "2024-05-17T11:17:08.702Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "b920e8ae-e958-4649-a449-39d709e5297f",
+      "fields": {
+        "size": "m",
+        "size_inventory": 6,
+        "product": "ca8dd496-4c48-4cb1-8cda-51c08510b52c",
+        "created_at": "2024-05-17T11:02:02.941Z",
+        "updated_at": "2024-05-17T11:02:02.941Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "ba87d2ee-21f4-4fb1-a771-9f1da17b7890",
+      "fields": {
+        "size": "m",
+        "size_inventory": 4,
+        "product": "d08f4efe-c16d-4743-b484-de7758b1c861",
+        "created_at": "2024-05-17T11:30:48.328Z",
+        "updated_at": "2024-05-17T11:30:48.328Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "bc24f091-da84-486c-a3af-0c2378f486c4",
+      "fields": {
+        "size": "xs",
+        "size_inventory": 2,
+        "product": "f783ae8a-f626-4e3a-8578-8756a507b1c8",
+        "created_at": "2024-05-17T10:34:41.622Z",
+        "updated_at": "2024-05-17T10:34:41.622Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "bd787b97-59bb-447a-b20d-b2da0491d331",
+      "fields": {
+        "size": "xxl",
+        "size_inventory": 5,
+        "product": "d3c93eb7-6df8-437a-b503-fd0632f78cdc",
+        "created_at": "2024-05-17T08:32:53.216Z",
+        "updated_at": "2024-05-17T08:32:53.216Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "c0177ead-97ab-4e35-ba90-8f3c3ceae30c",
+      "fields": {
+        "size": "s",
+        "size_inventory": 3,
+        "product": "45c897d3-722c-430c-9356-57bf2e58e1b7",
+        "created_at": "2024-05-17T10:31:12.134Z",
+        "updated_at": "2024-05-17T10:31:12.134Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "c112dcbe-e1e8-430e-b832-ae28f1e8c4cb",
+      "fields": {
+        "size": "m",
+        "size_inventory": 2,
+        "product": "066d477c-ea4b-488b-bee2-fe24a21a3ac1",
+        "created_at": "2024-05-17T10:52:07.330Z",
+        "updated_at": "2024-05-17T10:52:07.330Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "c906a630-aef0-4163-9204-1554a834ed25",
+      "fields": {
+        "size": "s",
+        "size_inventory": 4,
+        "product": "3dad2c1e-e5a1-431f-b3f5-e67ae67b3749",
+        "created_at": "2024-05-17T07:23:31.814Z",
+        "updated_at": "2024-05-17T07:23:31.814Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "c90ac499-f905-4b0c-b7e1-6c8c2667b76d",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 1,
+        "product": "597a4324-c507-4c27-8077-2b76e03f677d",
+        "created_at": "2024-05-17T11:32:28.201Z",
+        "updated_at": "2024-05-17T11:32:28.201Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "c93e0d63-db14-4d64-b0b5-ac9410597215",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 5,
+        "product": "e7b073a2-bef1-49a7-8435-ff5d481c6437",
+        "created_at": "2024-05-17T10:33:03.358Z",
+        "updated_at": "2024-05-17T10:33:03.358Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "c952d3f0-2df4-4658-9e13-80683a51ac8b",
+      "fields": {
+        "size": "l",
+        "size_inventory": 4,
+        "product": "80c941e4-d557-40ae-96b4-4ca0799246ca",
+        "created_at": "2024-05-17T10:53:31.215Z",
+        "updated_at": "2024-05-17T10:53:31.215Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "c9da3dac-ef42-4dd6-b0b1-1ca3e3a25773",
+      "fields": {
+        "size": "l",
+        "size_inventory": 4,
+        "product": "13e6fcee-7c61-4404-a6f9-313177a57936",
+        "created_at": "2024-05-17T11:18:25.592Z",
+        "updated_at": "2024-05-17T11:18:25.592Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "cbdb72a4-8a74-4bfe-976b-7e738c3d134e",
+      "fields": {
+        "size": "l",
+        "size_inventory": 5,
+        "product": "ea97faa7-abd2-422f-abcf-b03734fad6ca",
+        "created_at": "2024-05-17T10:54:41.294Z",
+        "updated_at": "2024-05-17T10:54:41.294Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "cc816a7f-2ea6-413b-80f8-ae50325f0686",
+      "fields": {
+        "size": "m",
+        "size_inventory": 6,
+        "product": "34f0e10c-3094-41d7-acfc-91584f3c8f54",
+        "created_at": "2024-05-17T10:42:21.881Z",
+        "updated_at": "2024-05-17T10:42:21.881Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "cdb77047-d088-48e0-896c-fc8544729bb3",
+      "fields": {
+        "size": "xxl",
+        "size_inventory": 4,
+        "product": "13e6fcee-7c61-4404-a6f9-313177a57936",
+        "created_at": "2024-05-17T11:18:25.637Z",
+        "updated_at": "2024-05-17T11:18:25.637Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "d343e53f-b93d-460b-a5c0-4bb90eccfcc9",
+      "fields": {
+        "size": "l",
+        "size_inventory": 4,
+        "product": "6bfa7037-e3a3-4622-bc0a-9afca8d7cc01",
+        "created_at": "2024-05-17T11:39:42.192Z",
+        "updated_at": "2024-05-17T11:39:42.192Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "d628909d-7de7-40a9-8080-32fa9e163cf5",
+      "fields": {
+        "size": "m",
+        "size_inventory": 5,
+        "product": "d3c93eb7-6df8-437a-b503-fd0632f78cdc",
+        "created_at": "2024-05-17T08:32:53.203Z",
+        "updated_at": "2024-05-17T08:32:53.203Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "d742d037-4a71-4251-b4c5-6887d43b9cba",
+      "fields": {
+        "size": "m",
+        "size_inventory": 5,
+        "product": "ba26268e-a4d9-4ce7-8f64-77f7e56a2d7c",
+        "created_at": "2024-05-17T11:03:53.845Z",
+        "updated_at": "2024-05-17T11:03:53.845Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "d96662cc-fe9a-4b3a-8965-932452ad8be6",
+      "fields": {
+        "size": "l",
+        "size_inventory": 5,
+        "product": "ba26268e-a4d9-4ce7-8f64-77f7e56a2d7c",
+        "created_at": "2024-05-17T11:03:53.853Z",
+        "updated_at": "2024-05-17T11:03:53.853Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "da7a6103-b032-4c51-a2b3-f7363eb404b1",
+      "fields": {
+        "size": "xs",
+        "size_inventory": 2,
+        "product": "066d477c-ea4b-488b-bee2-fe24a21a3ac1",
+        "created_at": "2024-05-17T10:52:07.321Z",
+        "updated_at": "2024-05-17T10:52:07.321Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "dc23ec06-85b0-47e2-9afe-38735b57b43b",
+      "fields": {
+        "size": "s",
+        "size_inventory": 3,
+        "product": "a4cbc102-5010-4870-a9a1-bdca99136bb9",
+        "created_at": "2024-05-17T10:40:27.198Z",
+        "updated_at": "2024-05-17T10:40:27.198Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "dfb54322-f276-4a28-a540-5101a532b181",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 2,
+        "product": "066d477c-ea4b-488b-bee2-fe24a21a3ac1",
+        "created_at": "2024-05-17T10:52:07.340Z",
+        "updated_at": "2024-05-17T10:52:07.340Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "e0f77cb8-6b35-427e-b96d-93a86969ee0e",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 2,
+        "product": "f79da496-22d3-4947-9ad3-97f265d19de0",
+        "created_at": "2024-05-17T07:20:15.917Z",
+        "updated_at": "2024-05-17T07:20:15.917Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "e21519a4-2310-4355-97c8-dcff9618633d",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 7,
+        "product": "86c2c317-f92b-4e60-af4e-b2836cce278d",
+        "created_at": "2024-05-17T07:29:09.955Z",
+        "updated_at": "2024-05-17T07:29:09.955Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "e5126fe8-0c7b-4400-af8e-ab45e9551968",
+      "fields": {
+        "size": "xs",
+        "size_inventory": 2,
+        "product": "ce83c479-d3ed-49e7-98a3-9d04c9815b2f",
+        "created_at": "2024-05-17T11:24:37.760Z",
+        "updated_at": "2024-05-17T11:24:37.760Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "e6bf9283-abbd-4601-bb59-4ff7f9dcf08c",
+      "fields": {
+        "size": "xxl",
+        "size_inventory": 6,
+        "product": "51bb9617-c95b-4401-bb27-9d04acb39a5c",
+        "created_at": "2024-05-17T07:45:23.181Z",
+        "updated_at": "2024-05-17T07:45:23.182Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "ef07c916-f2eb-47cb-8708-610c0f04d66d",
+      "fields": {
+        "size": "l",
+        "size_inventory": 6,
+        "product": "12d4b03b-2b13-487f-9578-0e47b51c9501",
+        "created_at": "2024-05-17T11:17:08.707Z",
+        "updated_at": "2024-05-17T11:17:08.707Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "f158a619-f328-4531-991a-82e326fea7d1",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 1,
+        "product": "c7e46c82-3ab7-414a-936e-986d17b23f93",
+        "created_at": "2024-05-17T10:22:07.400Z",
+        "updated_at": "2024-05-17T10:22:07.400Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "f2b25f9b-b732-4340-adb0-f22a73853610",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 2,
+        "product": "d3c93eb7-6df8-437a-b503-fd0632f78cdc",
+        "created_at": "2024-05-17T08:32:53.211Z",
+        "updated_at": "2024-05-17T08:32:53.211Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "fccfa2f1-97ba-4db7-8f24-e228d2fa19cc",
+      "fields": {
+        "size": "xs",
+        "size_inventory": 3,
+        "product": "ea97faa7-abd2-422f-abcf-b03734fad6ca",
+        "created_at": "2024-05-17T10:54:41.286Z",
+        "updated_at": "2024-05-17T10:54:41.286Z"
+      }
+    },
+    {
+      "model": "product.productsize",
+      "pk": "fdc12686-9682-480b-871c-4a3ac05cc4f7",
+      "fields": {
+        "size": "xl",
+        "size_inventory": 3,
+        "product": "32bcbd05-ca27-4c6e-8451-d2cd21d3c500",
+        "created_at": "2024-05-17T10:56:59.965Z",
+        "updated_at": "2024-05-17T10:56:59.965Z"
+      }
+    }
+  ]

@@ -1,0 +1,306 @@
+[
+  {
+    "model": "product.productimage",
+    "pk": "002994e3-a0b2-4ca9-ab28-1470ed5f6564",
+    "fields": {
+      "product": "a4cbc102-5010-4870-a9a1-bdca99136bb9",
+      "image": "fixtures/product_images/WRINKLE_LOOK_DOUBLE_BREASTED_BLAZER.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "00e6353d-1d15-47f9-9b40-8ccdf4f1143e",
+    "fields": {
+      "product": "4656c820-d720-4e4a-9327-c7b8cf9dc742",
+      "image": "fixtures/product_images/TOP_AND_SHORTS_SET.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "13ff73b0-9c7c-459e-a474-3315e0255568",
+    "fields": {
+      "product": "f79da496-22d3-4947-9ad3-97f265d19de0",
+      "image": "fixtures/product_images/BASIC_HEAVYWEIGHT_T-SHIRT.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "1420c2b8-c48a-4349-8ce1-4ce7b1b96c3b",
+    "fields": {
+      "product": "6bfa7037-e3a3-4622-bc0a-9afca8d7cc01",
+      "image": "fixtures/product_images/LINEN_SUIT_PANTS.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "181b9cf4-f62e-477f-ac4d-e5f4ffc93f7a",
+    "fields": {
+      "product": "425782dc-1afc-4c93-abcc-d6ee2dde8932",
+      "image": "fixtures/product_images/STRIPED_SWEATSHIRT_WITH_EMBROIDERY.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "28e1e33a-98b3-4584-aef0-90f5e33da572",
+    "fields": {
+      "product": "066d477c-ea4b-488b-bee2-fe24a21a3ac1",
+      "image": "fixtures/product_images/TIE_DYE_PRINT_SATIN_EFFECT_SHIRT.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "317bc89d-0a49-4c50-b95a-0a103ffc4673",
+    "fields": {
+      "product": "34f0e10c-3094-41d7-acfc-91584f3c8f54",
+      "image": "fixtures/product_images/LINEN_BLEND_DOUBLE_BREASTED_BLAZER.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "4698949f-6196-42fc-aead-9c6ce4d8fdb3",
+    "fields": {
+      "product": "45c897d3-722c-430c-9356-57bf2e58e1b7",
+      "image": "fixtures/product_images/TEXTURED_PLAID_SHIRT.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "48909f8c-e647-4f25-ad81-a842e26abeb1",
+    "fields": {
+      "product": "ea97faa7-abd2-422f-abcf-b03734fad6ca",
+      "image": "fixtures/product_images/GIRL_PRINT_T-SHIRT.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "49cad090-a4c6-4878-9123-9ea8a6488d65",
+    "fields": {
+      "product": "430fbf0d-95b2-48c8-be04-e8b46e962ba8",
+      "image": "fixtures/product_images/RUBBERIZED_EMBROIDERED_POPLIN_SHIRT.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "5709931d-7bc8-43ad-8e09-b3e5e57fe812",
+    "fields": {
+      "product": "13e6fcee-7c61-4404-a6f9-313177a57936",
+      "image": "fixtures/product_images/LINEN_AND_COTTON_BLEND_DRESS.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "582bc4dc-3e84-4e74-afcc-9d5228caba62",
+    "fields": {
+      "product": "7e6411ea-37b7-4c7f-87d7-15d062a4a2fb",
+      "image": "fixtures/product_images/MID_WAIST_BAGGY_BALLOON_JEANS.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "5cb0e7f5-a756-49d2-ad48-e828c1c14431",
+    "fields": {
+      "product": "ce83c479-d3ed-49e7-98a3-9d04c9815b2f",
+      "image": "fixtures/product_images/SHIRT_DRESS_WITH_POCKETS.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "5fa3445a-e94f-4e75-9ab3-f88ee748af60",
+    "fields": {
+      "product": "aa0aadc8-1912-415f-a727-9066ec35f5ee",
+      "image": "fixtures/product_images/STRIPED_JACQUARD_SHIRT.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "663287e3-41a0-4798-a4bf-5c7e512210ea",
+    "fields": {
+      "product": "12d4b03b-2b13-487f-9578-0e47b51c9501",
+      "image": "fixtures/product_images/PLEATED_POPLIN_DRESS.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "720d5587-e2bd-416d-8489-2abf22a46ab7",
+    "fields": {
+      "product": "8a72fbe9-628b-4e28-8593-b61ac0390c67",
+      "image": "fixtures/product_images/DENIM_STRAIGHT_CUT_PANTS.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "72198582-fea1-4a96-8d4b-eef960967728",
+    "fields": {
+      "product": "32309172-60be-4c0d-a13d-b9221763dfb4",
+      "image": "fixtures/product_images/STRIPED_KNIT_DRESS.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "79ec19ed-cc0c-4345-82db-26ec24a95a55",
+    "fields": {
+      "product": "7f3a75e2-9cc8-4916-bbde-14b6b9f5111b",
+      "image": "fixtures/product_images/WASHED_TEXTURED_JACKET.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "7c1ebd10-2b8d-4971-bd77-a4062a30d729",
+    "fields": {
+      "product": "597a4324-c507-4c27-8077-2b76e03f677d",
+      "image": "fixtures/product_images/TEXTURED_STRIPED_PANTS.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "82e43445-0f66-44f3-a909-5c1bd1d01629",
+    "fields": {
+      "product": "e7b073a2-bef1-49a7-8435-ff5d481c6437",
+      "image": "fixtures/product_images/WASHED_CARGO_PRINT_SHORT.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "88429c85-5df0-4e0d-8239-f9dabaf588eb",
+    "fields": {
+      "product": "d08f4efe-c16d-4743-b484-de7758b1c861",
+      "image": "fixtures/product_images/EMBROIDERED_TERRYCLOTH_POLO.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "88b74535-9665-41d4-b15a-4f4c2d6a5871",
+    "fields": {
+      "product": "fddf8e98-5acd-4784-bff1-5f5795f679b7",
+      "image": "fixtures/product_images/DIP_DYE_OPEN_KNIT_SWEATER.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "96c4608c-3215-4a35-90e7-ef1213b19795",
+    "fields": {
+      "product": "86c2c317-f92b-4e60-af4e-b2836cce278d",
+      "image": "fixtures/product_images/OPENWORK_EMBROIDERED_PANTS.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "9c797146-0f45-439f-9b5d-5db80f9b782e",
+    "fields": {
+      "product": "ce9936e9-d23c-4ee2-8736-63b539dc0a6e",
+      "image": "fixtures/product_images/VISCOSE_LINEN_SUIT_JACKET_nA7ZKyM.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "9d8a8555-68d9-4ecf-aeef-4383547cbe42",
+    "fields": {
+      "product": "ba26268e-a4d9-4ce7-8f64-77f7e56a2d7c",
+      "image": "fixtures/product_images/LOW_RISE_JEANS.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "a628fcb8-9f78-412a-97ff-cca3423f7fb8",
+    "fields": {
+      "product": "ca8dd496-4c48-4cb1-8cda-51c08510b52c",
+      "image": "fixtures/product_images/DENIM_TRF_JUMPSUIT.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "b4528093-06dc-4bd3-ae46-95c2a73a24a9",
+    "fields": {
+      "product": "51bb9617-c95b-4401-bb27-9d04acb39a5c",
+      "image": "fixtures/product_images/BOXY_FIT_HOODED_SWEATSHIRT.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "bec34fa1-b515-4be9-8f05-363fef86a147",
+    "fields": {
+      "product": "d3c93eb7-6df8-437a-b503-fd0632f78cdc",
+      "image": "fixtures/product_images/HEMP_DENIM_JACKET.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "c3877f82-9679-446b-84ef-c2ece3d1b9cc",
+    "fields": {
+      "product": "f80fc308-2b66-41ed-9291-3c85d4e935c8",
+      "image": "fixtures/product_images/LINEN_PANTS_WITH_BELT.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "ca163c30-14d9-48b7-9651-436fa087ea14",
+    "fields": {
+      "product": "b6f135de-43e6-4d16-a000-599daa190938",
+      "image": "fixtures/product_images/PRINTED_DRESS_ZW_COLLECTION.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "ca8a0594-b225-4108-9f08-f8cebc57cca5",
+    "fields": {
+      "product": "80c941e4-d557-40ae-96b4-4ca0799246ca",
+      "image": "fixtures/product_images/PRINTED_WASHED_EFFECT_T-SHIRT.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "caf4f143-6ba1-4d96-bbad-c791d6cbfcc8",
+    "fields": {
+      "product": "77f45867-e6cd-4269-8f7c-df8b3a322864",
+      "image": "fixtures/product_images/EMBROIDERED_COLOR_BLOCK_SWEATSHIRT.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "d9690544-aef2-4b65-b35c-867e940f2f2a",
+    "fields": {
+      "product": "fc4b8734-6b5e-4518-ac59-19c63d892e89",
+      "image": "fixtures/product_images/BAGGY_FIT_JORTS.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "e3c704d6-262b-4765-b55f-8653cbc8dea1",
+    "fields": {
+      "product": "c7e46c82-3ab7-414a-936e-986d17b23f93",
+      "image": "fixtures/product_images/WASHED_CARGO_SHORTS.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "e4c3e1fa-f84f-467e-86ec-aff7e8d43826",
+    "fields": {
+      "product": "32bcbd05-ca27-4c6e-8451-d2cd21d3c500",
+      "image": "fixtures/product_images/SWISS_DOT_DRESS_WITH_EMBROIDERY.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "ed47678a-dec9-4056-b285-acd91868af91",
+    "fields": {
+      "product": "f783ae8a-f626-4e3a-8578-8756a507b1c8",
+      "image": "fixtures/product_images/PRINTED_WASHED_T-SHIRT.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "ed66df51-b528-427b-bde7-466be292e9fb",
+    "fields": {
+      "product": "3dad2c1e-e5a1-431f-b3f5-e67ae67b3749",
+      "image": "fixtures/product_images/FLORAL_EMBROIDERED_SHIRT.jpg"
+    }
+  },
+  {
+    "model": "product.productimage",
+    "pk": "f6b88bd5-6a3a-41c3-89c2-07ff96371536",
+    "fields": {
+      "product": "c5b766e6-6978-48af-84a9-8eef35a37dc0",
+      "image": "fixtures/product_images/TIED_WRAP_SHIRT.jpg"
+    }
+  }
+]
