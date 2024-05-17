@@ -8,7 +8,7 @@ class IsAdminUser(permissions.BasePermission):
 
     def has_permission(self, request, view):
         # Check if the user has the required role
-        return request.user.roles.filter(name="Admin").exists()
+        return request.user.roles.filter(name="admin").exists()
 
 
 class IsOwner(permissions.BasePermission):

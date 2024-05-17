@@ -33,9 +33,7 @@ class Order(models.Model):
         max_length=20, default="created", choices=ORDER_STATUS_CHOICES
     )
 
-    delivery_date = models.DateField(
-        default=date.today() + timedelta(days=2), verbose_name="delivery_date"
-    )
+    delivery_date = models.DateField(default="", verbose_name="delivery_date")
     delivery_charge = models.FloatField(
         default=100.0, verbose_name="delivery_charge"
     )
