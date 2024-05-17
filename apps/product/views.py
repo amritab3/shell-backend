@@ -3,6 +3,7 @@ import json
 from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser, FormParser
 from django_filters.rest_framework import DjangoFilterBackend
@@ -14,11 +15,13 @@ from .models import (
     PRODUCT_CATEGORY_CHOICES,
     PRODUCT_SIZES_CHOICES,
     ProductComment,
+    ProductRating,
 )
 from .serializers import (
     ProductSerializer,
     ThriftProductSerializer,
     ProductCommentSerializer,
+    ProductRatingSerializer,
 )
 from backend.pagination import CustomPageNumberPagination
 
@@ -161,6 +164,12 @@ class ProductCommentsViewSet(viewsets.ModelViewSet):
     pagination_class = CustomPageNumberPagination
 
     def create(self, request, *args, **kwargs):
+        if not request.user or not request.user.is_authenticated:
+            return Response(
+                {"detail": "User must be authenticated to add comment"},
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
+
         user = request.user.id
         product = kwargs.get("product_id")
 
@@ -175,3 +184,46 @@ class ProductCommentsViewSet(viewsets.ModelViewSet):
         product = self.kwargs.get("product_id")
 
         return self.queryset.filter(product=product)
+
+
+class ProductRatingsViewSet(viewsets.ModelViewSet):
+    queryset = ProductRating.objects.all().order_by("-created_at")
+    serializer_class = ProductRatingSerializer
+    pagination_class = CustomPageNumberPagination
+
+    def create(self, request, *args, **kwargs):
+        if not request.user or not request.user.is_authenticated:
+            return Response(
+                {"detail": "User is not authenticated to add rating"},
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
+
+        user = request.user.id
+        product = kwargs.get("product_id")
+
+        request.data["user"] = user
+        request.data["product"] = product
+        return super(ProductRatingsViewSet, self).create(
+            request, *args, **kwargs
+        )
+
+    @action(
+        detail=False,
+        methods=["GET"],
+        url_path="user-rating",
+        url_name="user-rating",
+        permission_classes=[IsAuthenticated],
+    )
+    def user_rating(self, request, product_id=None):
+        if not request.user.is_authenticated:
+            return Response(
+                {"detail": "User is not authenticated to get rating"},
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
+
+        user = request.user.id
+        try:
+            rating = ProductRating.objects.get(product=product_id, user=user)
+            return Response({"rating": rating.rating_value})
+        except ProductRating.DoesNotExist:
+            return Response({"rating": 0})

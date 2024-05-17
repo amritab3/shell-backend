@@ -1,6 +1,12 @@
 from rest_framework import serializers
 
-from .models import Product, ProductSize, ProductImage, ProductComment
+from .models import (
+    Product,
+    ProductSize,
+    ProductImage,
+    ProductComment,
+    ProductRating,
+)
 
 
 class ProductSizeSerializer(serializers.ModelSerializer):
@@ -32,8 +38,28 @@ class ProductCommentSerializer(serializers.ModelSerializer):
             "user": {"write_only": True},
         }
 
-    def get_created_date(self, obj):
+    @staticmethod
+    def get_created_date(obj):
         return obj.created_at.strftime("%Y-%m-%d")
+
+
+class ProductRatingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductRating
+        fields = ["id", "user", "product", "rating_value"]
+        extra_kwargs = {
+            "user": {"write_only": True},
+            "product": {"write_only": True},
+        }
+
+    def create(self, validated_data):
+        rating, created = ProductRating.objects.update_or_create(
+            user=validated_data.get("user", None),
+            product=validated_data.get("product", None),
+            defaults={"rating_value": validated_data.get("rating_value", 0)},
+        )
+
+        return rating
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -51,6 +77,7 @@ class ProductSerializer(serializers.ModelSerializer):
     )
 
     comments = ProductCommentSerializer(many=True, read_only=True)
+    average_rating = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
         model = Product
@@ -71,6 +98,7 @@ class ProductSerializer(serializers.ModelSerializer):
             "images",
             "uploaded_images",
             "comments",
+            "average_rating",
         ]
 
     def create(self, validated_data):
@@ -95,6 +123,17 @@ class ProductSerializer(serializers.ModelSerializer):
             ProductImage.objects.create(product=product, image=image)
 
         return product
+
+    @staticmethod
+    def get_average_rating(obj):
+        ratings = ProductRating.objects.filter(product=obj)
+        if ratings.exists():
+            average_rating = 0
+            for rating in ratings:
+                average_rating += rating.rating_value
+
+            return int(average_rating / len(ratings))
+        return 0
 
 
 class ThriftProductSerializer(serializers.ModelSerializer):
