@@ -141,6 +141,7 @@ class ThriftProductsViewSet(viewsets.ModelViewSet):
 
     def create(self, request, *args, **kwargs):
         uploaded_sizes = json.loads(request.data.get("uploaded_sizes"))
+        user = request.user
 
         if not uploaded_sizes:
             return Response(
@@ -151,6 +152,7 @@ class ThriftProductsViewSet(viewsets.ModelViewSet):
         request.data._mutable = True
         request.data["uploaded_sizes"] = uploaded_sizes
         request.data["type"] = "thrift"
+        request.data["seller"] = user.id
         request.data._mutable = False
 
         return super(ThriftProductsViewSet, self).create(
@@ -201,6 +203,14 @@ class ProductRatingsViewSet(viewsets.ModelViewSet):
         user = request.user.id
         product = kwargs.get("product_id")
 
+        try:
+            Product.objects.get(id=product)
+        except Product.DoesNotExist:
+            return Response(
+                {"detail": "Product does not exist"},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
         request.data["user"] = user
         request.data["product"] = product
         return super(ProductRatingsViewSet, self).create(
@@ -219,6 +229,14 @@ class ProductRatingsViewSet(viewsets.ModelViewSet):
             return Response(
                 {"detail": "User is not authenticated to get rating"},
                 status=status.HTTP_401_UNAUTHORIZED,
+            )
+
+        try:
+            Product.objects.get(id=product_id)
+        except Product.DoesNotExist:
+            return Response(
+                {"detail": "Product does not exist"},
+                status=status.HTTP_404_NOT_FOUND,
             )
 
         user = request.user.id

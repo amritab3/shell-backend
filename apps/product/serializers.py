@@ -99,7 +99,11 @@ class ProductSerializer(serializers.ModelSerializer):
             "uploaded_images",
             "comments",
             "average_rating",
+            "seller",
         ]
+        extra_kwargs = {
+            "seller": {"write_only": True},
+        }
 
     def create(self, validated_data):
         uploaded_sizes = validated_data.pop("uploaded_sizes")
@@ -168,6 +172,7 @@ class ThriftProductSerializer(serializers.ModelSerializer):
             "uploaded_sizes",
             "images",
             "uploaded_images",
+            "seller",
         ]
 
     def create(self, validated_data):

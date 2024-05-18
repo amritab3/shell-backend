@@ -70,6 +70,10 @@ class Product(models.Model):
         default="",
         verbose_name="product_type",
     )
+    seller = models.ForeignKey(
+        "user.User", on_delete=models.CASCADE, null=True, blank=True
+    )
+
     created_at = models.DateTimeField(
         auto_now_add=True, verbose_name="created_at"
     )
