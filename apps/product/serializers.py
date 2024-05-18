@@ -154,6 +154,8 @@ class ThriftProductSerializer(serializers.ModelSerializer):
         write_only=True,
     )
 
+    seller_details = serializers.SerializerMethodField(read_only=True)
+
     class Meta:
         model = Product
         fields = [
@@ -173,7 +175,11 @@ class ThriftProductSerializer(serializers.ModelSerializer):
             "images",
             "uploaded_images",
             "seller",
+            "seller_details",
         ]
+        extra_kwargs = {
+            "seller": {"write_only": True},
+        }
 
     def create(self, validated_data):
         uploaded_sizes = validated_data.pop("uploaded_sizes")
@@ -197,3 +203,13 @@ class ThriftProductSerializer(serializers.ModelSerializer):
             ProductImage.objects.create(product=product, image=image)
 
         return product
+
+    @staticmethod
+    def get_seller_details(obj):
+        seller = obj.seller
+        if seller:
+            return {
+                "id": seller.id,
+                "email": seller.email,
+                "name": seller.first_name + " " + seller.last_name,
+            }
