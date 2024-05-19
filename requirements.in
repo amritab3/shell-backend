@@ -8,3 +8,6 @@ djangorestframework_simplejwt
 django-cors-headers
 pillow
 django-filter
+channels
+channels-redis
+daphne

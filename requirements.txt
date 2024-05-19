@@ -6,11 +6,43 @@
 #
 asgiref==3.7.2
     # via
+    #   channels
+    #   channels-redis
+    #   daphne
     #   django
     #   django-cors-headers
+async-timeout==4.0.3
+    # via redis
+attrs==23.2.0
+    # via
+    #   automat
+    #   service-identity
+    #   twisted
+autobahn==23.6.2
+    # via daphne
+automat==22.10.0
+    # via twisted
+cffi==1.16.0
+    # via cryptography
+channels==4.1.0
+    # via
+    #   -r requirements.in
+    #   channels-redis
+channels-redis==4.2.0
+    # via -r requirements.in
+constantly==23.10.4
+    # via twisted
+cryptography==42.0.7
+    # via
+    #   autobahn
+    #   pyopenssl
+    #   service-identity
+daphne==4.1.2
+    # via -r requirements.in
 django==4.2.6
     # via
     #   -r requirements.in
+    #   channels
     #   django-cors-headers
     #   django-filter
     #   djangorestframework
@@ -25,6 +57,18 @@ djangorestframework==3.14.0
     #   djangorestframework-simplejwt
 djangorestframework-simplejwt==5.3.1
     # via -r requirements.in
+hyperlink==21.0.0
+    # via
+    #   autobahn
+    #   twisted
+idna==3.7
+    # via
+    #   hyperlink
+    #   twisted
+incremental==22.10.0
+    # via twisted
+msgpack==1.0.8
+    # via channels-redis
 pillow==10.2.0
     # via -r requirements.in
 psycopg==3.1.12
@@ -33,16 +77,42 @@ psycopg-binary==3.1.12
     # via -r requirements.in
 psycopg-pool==3.1.8
     # via -r requirements.in
+pyasn1==0.6.0
+    # via
+    #   pyasn1-modules
+    #   service-identity
+pyasn1-modules==0.4.0
+    # via service-identity
+pycparser==2.22
+    # via cffi
 pyjwt==2.8.0
     # via djangorestframework-simplejwt
+pyopenssl==24.1.0
+    # via twisted
 python-dotenv==1.0.0
     # via -r requirements.in
 pytz==2023.3.post1
     # via djangorestframework
+redis==5.0.4
+    # via channels-redis
+service-identity==24.1.0
+    # via twisted
+six==1.16.0
+    # via automat
 sqlparse==0.4.4
     # via django
+twisted[tls]==24.3.0
+    # via daphne
+txaio==23.1.1
+    # via autobahn
 typing-extensions==4.8.0
     # via
     #   asgiref
     #   psycopg
     #   psycopg-pool
+    #   twisted
+zope-interface==6.4
+    # via twisted
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools
