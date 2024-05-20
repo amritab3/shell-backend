@@ -34,6 +34,7 @@ urlpatterns = [
     re_path("auth/", include("apps.custom_auth.urls")),
     re_path("products/", include("apps.product.urls")),
     re_path("orders/", include("apps.order.urls")),
+    re_path("chats/", include("apps.chat.urls")),
 ]
 urlpatterns += router.urls
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

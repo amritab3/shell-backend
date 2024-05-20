@@ -180,6 +180,7 @@ cython_debug/
 
 # local files
 .postgres-data/
+.redis-data/
 
 # intellij
 .idea
