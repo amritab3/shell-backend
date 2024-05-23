@@ -1,11 +1,11 @@
 import json
 
-from django.db.models import Q
 from channels.db import database_sync_to_async
 from channels.generic.websocket import AsyncWebsocketConsumer
 from django.contrib.auth import get_user_model
 
-from .models import ChatRoom
+from .models import ChatRoom, ChatMessage
+from .serializers import ChatMessageSerializer
 
 
 def combine_ids(id1, id2):
@@ -26,6 +26,8 @@ class ChatConsumer(AsyncWebsocketConsumer):
         combined_id = combine_ids(from_id, to_id)
         chat_room = await self.create_chat_room(combined_id, [from_id, to_id])
 
+        existing_messages = await self.get_existing_messages(chat_room.id)
+
         self.room_name = chat_room.id
         self.room_group_name = f"chat_{self.room_name}"
 
@@ -33,6 +35,9 @@ class ChatConsumer(AsyncWebsocketConsumer):
             self.room_group_name, self.channel_name
         )
         await self.accept()
+        await self.send(
+            text_data=json.dumps({"existing_messages": existing_messages})
+        )
 
     async def disconnect(self, close_code):
         await self.channel_layer.group_discard(
@@ -73,9 +78,15 @@ class ChatConsumer(AsyncWebsocketConsumer):
 
     @database_sync_to_async
     def create_chat_room(self, room_name, participant_ids):
-        chat_room, created = ChatRoom.objects.get_or_create(
-            Q(name=room_name) | Q(participants=participant_ids)
-        )
+        chat_room, created = ChatRoom.objects.get_or_create(name=room_name)
         if created:
             chat_room.participants.set(participant_ids)
         return chat_room
+
+    @database_sync_to_async
+    def get_existing_messages(self, room):
+        existing_messages = ChatMessage.objects.filter(room=room)
+        message_serializer = ChatMessageSerializer(
+            instance=existing_messages, many=True
+        )
+        return message_serializer.data
