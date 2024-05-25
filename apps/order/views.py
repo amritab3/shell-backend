@@ -1,6 +1,7 @@
 from rest_framework import viewsets, status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+from rest_framework.decorators import action
 
 from .models import Order, OrderPayment, OrderItem
 from .serializers import OrderSerializer
@@ -68,3 +69,64 @@ class OrderViewSet(viewsets.ModelViewSet):
             "paymentFormData": payment_form_data,
         }
         return Response(data=response_data, status=status.HTTP_201_CREATED)
+
+    @action(
+        detail=True,
+        methods=["GET"],
+        url_path="order-data",
+        url_name="order_data",
+    )
+    def order_data(self, request, pk=None):
+        order = self.get_object()
+
+        response_data = {
+            "order_id": order.id,
+            "user_email": order.user.email,
+            "user_phone": order.user.mobile_no,
+        }
+
+        return Response(response_data, status=status.HTTP_200_OK)
+
+    @action(
+        detail=True,
+        methods=["POST"],
+        url_path="payment-success",
+        url_name="payment-success",
+    )
+    def payment_success(self, request, pk=None):
+        order = self.get_object()
+
+        order.status = "paid"
+
+        order_payment = OrderPayment.objects.get(order_id=order.id)
+        order_payment.payment_status = "completed"
+
+        order.save()
+        order_payment.save()
+
+        return Response(
+            data={"message": "Payment details updated"},
+            status=status.HTTP_200_OK,
+        )
+
+    @action(
+        detail=True,
+        methods=["POST"],
+        url_path="payment-failed",
+        url_name="payment-failed",
+    )
+    def payment_failed(self, request, pk=None):
+        order = self.get_object()
+
+        order.status = "payment_pending"
+
+        order_payment = OrderPayment.objects.get(order_id=order.id)
+        order_payment.payment_status = "failed"
+
+        order.save()
+        order_payment.save()
+
+        return Response(
+            data={"message": "Payment details updated"},
+            status=status.HTTP_200_OK,
+        )

@@ -13,6 +13,7 @@ PAYMENT_METHOD_CHOICES = (
 ORDER_STATUS_CHOICES = (
     ("created", "Created"),
     ("paid", "Paid"),
+    ("payment_pending", "Payment Pending"),
     ("cancelled", "Cancelled"),
     ("shipping", "Shipping"),
     ("delivered", "Delivered"),
