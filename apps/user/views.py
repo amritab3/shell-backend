@@ -104,7 +104,7 @@ class RolesViewSet(viewsets.ModelViewSet):
     def user_role_choices(self, request, *args, **kwargs):
         roles = Role.objects.all()
         role_choices = [
-            {"label": role.name.capitalize(), "value": role.name.lower()}
+            {"label": role.name.capitalize(), "value": role.id}
             for role in roles
         ]
 
