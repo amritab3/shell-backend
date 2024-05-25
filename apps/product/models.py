@@ -12,7 +12,6 @@ PRODUCT_CATEGORY_CHOICES = (
     ("sweaters", "Sweaters"),
     ("blazers", "Blazers"),
     ("jackets", "Jackets"),
-    ("shoes", "Shoes"),
     ("others", "Others"),
 )
 
