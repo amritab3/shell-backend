@@ -60,8 +60,8 @@ class OrderViewSet(viewsets.ModelViewSet):
             "transaction_uuid": order.data["id"],
             "product_code": "EPAYTEST",
             "signed_field_names": "total_amount,transaction_uuid,product_code",
-            "success_url": "http://localhost:3000/user/order/payment-success",
-            "failure_url": "http://localhost:3000/user/order/payment-failed",
+            "success_url": "http://localhost:3000/user/payments/payment-success",
+            "failure_url": "http://localhost:3000/user/payments/payment-failed",
         }
 
         response_data = {
