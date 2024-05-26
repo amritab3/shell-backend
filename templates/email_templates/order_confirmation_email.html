@@ -1,0 +1,65 @@
+<!-- templates/order_confirmation_email.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .order-details {
+            margin-bottom: 20px;
+        }
+        .order-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .order-details ul li {
+            padding: 5px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Thank you for your order, {{ CUSTOMER_NAME }}!</h1>
+        </div>
+        <p>We have received your order and will start processing it right away.</p>
+        <div class="order-details">
+            <h2>Order Details</h2>
+            <ul>
+                <li><strong>Order ID:</strong> {{ ORDER_ID }}</li>
+                <li><strong>Order Date:</strong> {{ ORDER_DATE }}</li>
+                <li><strong>Total Amount:</strong> {{ TOTAL_AMOUNT }}</li>
+            </ul>
+        </div>
+        <div class="footer">
+            <p>If you have any questions, feel free to <a href="mailto:shellybhattarai@gmail.com">contact us</a>.</p>
+            <p>&copy; 2024 ThreadSwap. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

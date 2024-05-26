@@ -45,6 +45,7 @@ class OrderSerializer(serializers.ModelSerializer):
             "delivery_charge",
             "delivery_date",
             "cart_items",
+            "created_at",
         ]
 
     def create(self, validated_data):

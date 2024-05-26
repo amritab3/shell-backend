@@ -1,7 +1,11 @@
+import os
+
+from django.core.mail import EmailMultiAlternatives
 from rest_framework import viewsets, status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.decorators import action
+from django.template.loader import render_to_string
 
 from .models import Order, OrderPayment, OrderItem
 from .serializers import OrderSerializer
@@ -68,6 +72,25 @@ class OrderViewSet(viewsets.ModelViewSet):
             "order": order.data,
             "paymentFormData": payment_form_data,
         }
+
+        merge_data = {
+            "ORDER_ID": order.data["id"],
+            "CUSTOMER_NAME": request.user.first_name + request.user.last_name,
+            "TOTAL_AMOUNT": order.data["order_amount"],
+            "ORDER_DATE": order.data["created_at"],
+        }
+        html_data = render_to_string(
+            "order_confirmation_email.html", merge_data
+        )
+        message = EmailMultiAlternatives(
+            subject="Order Confirmation",
+            body="order confirmation email",
+            from_email=os.environ.get("FROM_EMAIL"),
+            to=[request.user.email],
+        )
+        message.attach_alternative(html_data, "text/html")
+        message.send(fail_silently=False)
+
         return Response(data=response_data, status=status.HTTP_201_CREATED)
 
     @action(
