@@ -3,8 +3,8 @@ from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from apps.chat.models import ChatRoom
-from apps.chat.serializers import ChatRoomSerializer
+from apps.chat.models import ChatRoom, ChatMessage
+from apps.chat.serializers import ChatRoomSerializer, ChatMessageSerializer
 from apps.user.models import User
 
 
@@ -46,3 +46,14 @@ class ChatRoomViewSet(viewsets.ModelViewSet):
                     )
 
         return Response(response_data, status=status.HTTP_200_OK)
+
+    @action(
+        detail=True, methods=["GET"], url_path="messages", url_name="messages"
+    )
+    def get_messages(self, request, pk=None):
+        room = self.get_object()
+
+        room_messages = ChatMessage.objects.filter(room=room)
+        serializer = ChatMessageSerializer(room_messages, many=True)
+
+        return Response(data=serializer.data, status=status.HTTP_200_OK)

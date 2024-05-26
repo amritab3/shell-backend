@@ -26,8 +26,6 @@ class ChatConsumer(AsyncWebsocketConsumer):
         combined_id = combine_ids(from_id, to_id)
         chat_room = await self.create_chat_room(combined_id, [from_id, to_id])
 
-        existing_messages = await self.get_existing_messages(chat_room.id)
-
         self.room_name = chat_room.id
         self.room_group_name = f"chat_{self.room_name}"
 
@@ -35,8 +33,13 @@ class ChatConsumer(AsyncWebsocketConsumer):
             self.room_group_name, self.channel_name
         )
         await self.accept()
-        await self.send(
-            text_data=json.dumps({"existing_messages": existing_messages})
+
+        await self.channel_layer.group_send(
+            self.room_group_name,
+            {
+                "type": "on_connect_message",
+                "room": str(chat_room.id),
+            },
         )
 
     async def disconnect(self, close_code):
@@ -69,6 +72,15 @@ class ChatConsumer(AsyncWebsocketConsumer):
                 {
                     "message": message,
                 }
+            )
+        )
+
+    async def on_connect_message(self, event):
+        room = event["room"]
+
+        await self.send(
+            text_data=json.dumps(
+                {"message": "Connected", "on_connect": True, "room": room}
             )
         )
 
