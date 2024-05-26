@@ -6,7 +6,7 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import action
 
-from backend.permissions import IsAdminUser
+from backend.permissions import IsAdminUser, IsShopAdminUser
 from .permissions import IsOwner
 from .serializers import (
     UserSerializer,
@@ -29,7 +29,7 @@ class ListUserView(generics.ListAPIView):
     serializer_class = UserSerializer
     queryset = User.objects.all()
     authentication_classes = [JWTAuthentication]
-    permission_classes = [IsAuthenticated, IsAdminUser]
+    permission_classes = [IsAuthenticated, IsAdminUser, IsShopAdminUser]
     pagination_class = CustomPageNumberPagination
 
 
