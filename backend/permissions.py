@@ -11,6 +11,16 @@ class IsAdminUser(permissions.BasePermission):
         return request.user.roles.filter(name="admin").exists()
 
 
+class IsShopAdminUser(permissions.BasePermission):
+    """
+    Custom permission to only allow users with admin role.
+    """
+
+    def has_permission(self, request, view):
+        # Check if the user has the required role
+        return request.user.roles.filter(name="shopadmin").exists()
+
+
 class IsOwner(permissions.BasePermission):
     message = "You do not have permission to perform this action."
 
