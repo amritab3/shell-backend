@@ -26,3 +26,6 @@ urlpatterns = [
     path("", ListUserView.as_view(), name="list_user"),
     path("<str:pk>/", RetrieveUpdateDeleteUser.as_view(), name="user-detail"),
 ]
+
+# Create a single USerViewSet and create actions using decorator for fetching user cart, orders.
+# should do detail=True as we can get user pk in action

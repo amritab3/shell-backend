@@ -3,7 +3,7 @@ import json
 from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser, FormParser
 from django_filters.rest_framework import DjangoFilterBackend
@@ -139,9 +139,28 @@ class ThriftProductsViewSet(viewsets.ModelViewSet):
     ordering_fields = ["name", "price"]
     search_fields = ["name"]
 
+    permission_classes_by_action = {
+        "create": [IsAuthenticated],
+        "list": [AllowAny],
+    }
+
+    def get_permissions(self):
+        try:
+            # return permission_classes depending on `action`
+            return [
+                permission()
+                for permission in self.permission_classes_by_action[
+                    self.action
+                ]
+            ]
+        except KeyError:
+            # action is not set return default permission_classes
+            return [permission() for permission in self.permission_classes]
+
     def create(self, request, *args, **kwargs):
         uploaded_sizes = json.loads(request.data.get("uploaded_sizes"))
         user = request.user
+        print("GG", user)
 
         if not uploaded_sizes:
             return Response(
