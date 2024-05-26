@@ -212,4 +212,5 @@ class ThriftProductSerializer(serializers.ModelSerializer):
                 "id": seller.id,
                 "email": seller.email,
                 "name": seller.first_name + " " + seller.last_name,
+                "mobile_no": seller.mobile_no,
             }
