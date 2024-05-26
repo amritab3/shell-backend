@@ -160,7 +160,6 @@ class ThriftProductsViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         uploaded_sizes = json.loads(request.data.get("uploaded_sizes"))
         user = request.user
-        print("GG", user)
 
         if not uploaded_sizes:
             return Response(
